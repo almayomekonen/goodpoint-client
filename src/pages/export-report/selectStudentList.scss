@@ -1,0 +1,77 @@
+.Select-student-list-list-container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 9rem;
+    overflow: hidden;
+
+    #scrollableDiv {
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+        overflow-x: hidden;
+        position: relative;
+        padding-bottom: 2rem;
+        padding-inline: 4rem;
+    }
+
+    .user-card-border {
+        border-bottom: 1px $user_card_border solid;
+        padding-block: 0.5em;
+    }
+
+    .Select-student-list-list-users-container {
+        background-color: white;
+        padding-top: 2vh;
+        position: absolute;
+        top: 0%;
+        z-index: 1;
+        padding-bottom: 1rem;
+        width: 100%;
+
+        .Select-student-list-list-users-container-header {
+            color: $orange;
+            font-size: 1.8rem;
+        }
+    }
+
+    .oval-wrapper {
+        padding: 1em;
+        direction: rtl;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+
+    .Select-student-list-button {
+        background-color: $blue3;
+        width: 10rem;
+        height: 4rem;
+        position: absolute;
+        bottom: 3%;
+        left: 3%;
+        z-index: 1;
+        border: none;
+        border-radius: 2rem;
+        color: white;
+        gap: 0.8rem;
+        @include flex(row, center, center);
+        cursor: pointer;
+
+        .Select-student-list-text {
+            font-size: 1.3rem;
+            font-family: 'Rubik-regular';
+        }
+
+        .Select-student-list-icon {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    .search {
+        width: 85%;
+    }
+}

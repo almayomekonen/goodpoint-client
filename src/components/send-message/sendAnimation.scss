@@ -1,0 +1,42 @@
+$wow: "data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%23" +
+    $orange-str +
+    "' stroke-width='19' stroke-dasharray='1%2c20' stroke-dashoffset='100' stroke-linecap='butt'/%3e%3c/svg%3e";
+
+.sendAnimation {
+    .wow {
+        height: 60px;
+        width: 60px;
+        background-image: url($wow);
+        border-radius: 100px;
+        position: absolute;
+        left: 1.5rem;
+        transform: translate(-35%, -50%);
+        opacity: 1;
+        animation-name: show;
+        animation-duration: 1s;
+    }
+
+    .MuiSvgIcon-root {
+        left: 1rem;
+        right: auto;
+        color: $orange;
+    }
+
+    .circle {
+        color: $orange;
+    }
+
+    @keyframes show {
+        0% {
+            opacity: 0;
+        }
+
+        10% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+}

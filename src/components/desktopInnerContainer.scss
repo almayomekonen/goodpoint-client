@@ -1,0 +1,50 @@
+.divider {
+    background-color: $light_blue2;
+}
+
+.generic-home-wrapper {
+    width: 100%;
+    height: 100%;
+    @include flex(row, space-between);
+
+    overflow: hidden;
+
+    .Form-actualForm,
+    .Form-rtl {
+        height: 100%;
+    }
+
+    .small {
+        width: 30%;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .small {
+            width: 40%;
+        }
+    }
+
+    .large {
+        width: 40%;
+        width: clamp(30vw, 40%, 40vw);
+    }
+
+    .main-container {
+        background-color: white;
+        height: 100%;
+    }
+
+    .sub-container {
+        background-color: white;
+        flex: 1;
+        margin-inline-start: 2em;
+        @include flex(row, center, center);
+
+        position: relative;
+
+        .image {
+            width: 70%;
+            height: 70%;
+        }
+    }
+}

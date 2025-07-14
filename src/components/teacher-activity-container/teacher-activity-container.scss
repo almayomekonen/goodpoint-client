@@ -1,0 +1,73 @@
+.teacher-activity-container {
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+
+    .teacher-activity-bottom-bar {
+        width: 100%;
+        background-color: $light_blue2;
+        height: 0.2rem;
+        display: flex;
+        position: relative;
+
+        .teacher-activity-bottom-bar-inner-background {
+            background-color: $dark_blue1;
+            width: 50%;
+            height: 0.2rem;
+            position: absolute;
+            transition: all 0.5s ease;
+        }
+    }
+
+    .teacher-activity-container-header {
+        height: 7vh;
+        @include flex(row, flex-start, center);
+
+        background-color: white;
+
+        .teacher-activity-tab {
+            width: 50%;
+            @include flex(row, center);
+            gap: 0.5rem;
+
+            .teacher-activity-tab-text {
+                font-size: 1.2rem;
+                font-size: $font-big;
+                font-family: 'Rubik-regular';
+            }
+
+            .teacher-activity-tab-icon {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            .teacher-activity-tab-icon-students {
+                width: 1.3rem;
+                height: 1.3rem;
+            }
+        }
+    }
+}
+
+.teacher-activity-container-desktop {
+    top: 0;
+
+    //matching the widths of the header and the gp list
+    width: 40vw;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    flex-direction: column;
+}
+
+.teacher-activity-container-mobile {
+    bottom: 0;
+    width: 100vw;
+    flex-direction: column-reverse;
+}
+
+//fixes an issue with the url header in mobile browser
+@media screen and (max-width: 800px) {
+    .teacher-activity-container {
+        position: fixed;
+    }
+}

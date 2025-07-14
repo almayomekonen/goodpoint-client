@@ -1,0 +1,42 @@
+.searchBox {
+    @include flex(row, center);
+    width: 100%;
+
+    .container {
+        margin-top: 1.5rem;
+        background-color: white;
+        border-radius: 10px;
+        width: 89%;
+        display: flex;
+
+        .MuiInputBase-input {
+            font-family: 'Rubik-light';
+            color: $dark_blue1;
+            font-size: 1.2rem;
+            height: 1rem;
+        }
+    }
+
+    .searchBox-with-border {
+        border: solid 1px $light_grey;
+        border-radius: 10px;
+    }
+
+    .MuiTextField-root .MuiOutlinedInput-notchedOutline {
+        border-radius: 10px;
+        border: none;
+    }
+
+    ::placeholder {
+        opacity: 1;
+    }
+
+    .icons {
+        color: $dark_blue1;
+        cursor: pointer;
+    }
+
+    .clear-icon {
+        display: flex;
+    }
+}

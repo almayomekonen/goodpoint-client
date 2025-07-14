@@ -1,0 +1,59 @@
+.styled-headline-container {
+    margin: 10rem;
+
+    .content-wrapper {
+        @include flex(column, center, flex-start);
+
+        position: absolute;
+        top: 50%;
+        right: 0;
+        z-index: 10;
+        background-color: $orange;
+        color: $dark_blue1;
+        width: 70%;
+        height: 8rem;
+        border-radius: 40px 40px 0 40px;
+        padding: 3rem;
+        gap: 0.5rem;
+
+        .left-invisible-div {
+            width: 2rem;
+        }
+
+        .name {
+            color: white;
+            font-family: Rubik-regular;
+            font-size: 1.4rem;
+        }
+
+        .status {
+            color: white;
+            font-family: Rubik-light;
+            font-size: 1.2rem;
+            white-space: nowrap;
+            gap: 0.5rem;
+        }
+
+        .favoriteIcon {
+            opacity: 0.6;
+        }
+    }
+
+    .content-wrapper::before {
+        content: '';
+        position: absolute;
+        background-color: transparent;
+        bottom: -55px;
+        height: 55px;
+        width: 53px;
+        border-top-right-radius: 47px;
+        box-shadow: 4px -25px 0 4px $orange;
+        right: 0;
+    }
+
+    .children {
+        position: absolute;
+        bottom: -5rem;
+        right: 1rem;
+    }
+}

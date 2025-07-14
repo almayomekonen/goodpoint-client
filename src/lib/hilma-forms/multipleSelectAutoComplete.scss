@@ -1,0 +1,38 @@
+@import '../../admin/common/styles/colors.admin.scss';
+
+.Form-SelectAutoComplete-container {
+    width: min-content;
+    text-align: start;
+
+    .Form-SelectAutoComplete-label {
+        font-family: 'Rubik-medium';
+        font-size: 1.3rem;
+        color: $color-text;
+    }
+
+    .Form-SelectAutoComplete {
+        // @include input-design();
+        text-align: start;
+
+        background-color: white;
+        color: $color-text;
+        border: 1px solid $border-grey;
+        border-radius: 11px;
+        width: 15rem;
+        font-family: 'Rubik-light';
+        font-size: 1.2rem;
+        outline-width: 1px;
+
+        .MuiOutlinedInput-notchedOutline {
+            border: none;
+        }
+
+        .MuiOutlinedInput-root {
+            padding: 3px;
+        }
+
+        &:hover {
+            border: 1px solid $dark_blue1;
+        }
+    }
+}

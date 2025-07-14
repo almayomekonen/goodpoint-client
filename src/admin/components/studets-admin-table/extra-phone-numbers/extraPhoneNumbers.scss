@@ -1,0 +1,29 @@
+@import '../../../common/styles/colors.admin.scss';
+
+.add-or-edit-container {
+    .add-phone-numbers-btn {
+        color: $color-text;
+        text-decoration: underline;
+        background-color: transparent;
+        font-size: 1rem;
+        font-family: 'Rubik-medium';
+        border: none;
+        justify-content: start;
+        height: 5vh;
+        width: 10%;
+    }
+
+    .pop-add-container {
+        .add-phone-numbers-btn {
+            padding-right: 2vw;
+        }
+    }
+
+    .Form-textInput-maxLength {
+        display: none;
+    }
+
+    .delete-icon :hover {
+        cursor: pointer;
+    }
+}

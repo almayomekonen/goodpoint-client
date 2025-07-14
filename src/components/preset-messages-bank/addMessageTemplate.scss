@@ -1,0 +1,110 @@
+.add-message-container {
+    text-align: center;
+    font-family: 'Rubik-regular';
+    backdrop-filter: $popupBlur;
+    direction: rtl;
+    @include flex(column);
+    margin: 0 2rem;
+    align-self: center;
+    gap: 1vh;
+    width: 30rem;
+    padding-top: 2rem;
+
+    .dropdowns {
+        display: flex;
+        gap: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .clear-icon {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: #90abba;
+
+        cursor: pointer;
+    }
+
+    //mui
+    .MuiOutlinedInput-root {
+        border-radius: 10px;
+        height: 3.5rem;
+    }
+
+    // text field
+    .MuiOutlinedInput-input {
+        font-size: 1.3rem;
+        font-family: 'Rubik-regular';
+        padding: 0.8rem 1rem;
+        border-radius: 20px;
+        border-radius: 10px;
+    }
+
+    //dropdown
+    .MuiSelect-select {
+        border-radius: 10px;
+        font-size: 1.3rem;
+        font-family: 'Rubik-regular';
+        text-align: right;
+        height: 1rem;
+        @include flex(row, flex-start, center);
+    }
+
+    .warning-text {
+        height: 0.5rem;
+        color: #96b3bd;
+        font-size: 1.2rem;
+        font-family: 'Rubik-regular';
+        position: relative;
+        top: -1rem;
+        white-space: nowrap;
+    }
+
+    .buttons {
+        display: flex;
+
+        .add-button {
+            width: 12rem;
+            height: 4rem;
+            border-radius: 13px;
+            font-size: 1.5rem;
+            color: white;
+            font-family: 'Rubik-medium';
+            background-color: $dark_blue1;
+        }
+
+        .cancel-button {
+            width: 12rem;
+            height: 4rem;
+            border-radius: 13px;
+            font-size: 1.5rem;
+            font-family: 'Rubik-medium';
+            border: 1px solid #081d5a80;
+            color: $dark_blue1;
+        }
+    }
+
+    .disabled {
+        opacity: 0.5;
+    }
+
+    @media only screen and (max-width: 800px) {
+        width: 20rem;
+
+        .add-button,
+        .cancel-button {
+            scale: 0.8;
+        }
+
+        .buttons {
+            gap: 0rem;
+        }
+    }
+}
+
+.add-pm-popup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

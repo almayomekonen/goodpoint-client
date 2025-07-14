@@ -1,0 +1,78 @@
+.student-page-container {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-background-off-white;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    padding-inline: 5vw;
+
+    .Form-body {
+        width: auto;
+    }
+
+    .AdminTable-row {
+        background-color: #ebf4f5;
+        height: auto;
+    }
+
+    .title-header-area {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+        margin-top: 14vh;
+        margin-bottom: 3vh;
+
+        .title-header-with-side-btn {
+            @include flex(row, space-between, center);
+
+            .side-btn {
+                display: flex;
+                gap: 2rem;
+                flex-direction: row-reverse;
+
+                .delete-teacher,
+                .reset-password {
+                    background-color: white;
+                    color: $color-text;
+                    font-family: 'Rubik-regular';
+                    border-radius: 15px;
+                    font-size: 1.25rem;
+                    border: solid 1px $color-text;
+                    display: flex;
+                    gap: 0.5rem;
+                    padding-inline: 1rem;
+
+                    svg {
+                        color: $color-text;
+                    }
+                }
+            }
+        }
+
+        .edit-title {
+            color: $red;
+            font-size: 1.8125rem;
+            font-family: 'Rubik-medium';
+        }
+
+        .hr-edit {
+            margin-right: 3vh;
+            width: 90%;
+        }
+    }
+}
+
+.loading {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
+.reset-password-content {
+    color: $dark_blue1;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}

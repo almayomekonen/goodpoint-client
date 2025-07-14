@@ -1,0 +1,49 @@
+@mixin flex($flex-dir, $justify: flex-start, $align-items: unset) {
+    display: flex;
+    flex-direction: $flex-dir;
+    justify-content: $justify;
+    align-items: $align-items;
+}
+
+@mixin popping-image-animation($number-of-elements, $duration) {
+    .popping-images-container {
+        .popping-image-container {
+            position: absolute;
+            animation: shoot $duration ease-in-out 1;
+            animation-name: shoot;
+
+            @for $i from 0 to $number-of-elements {
+                $t: (1 + 0.01 * random(100)) * 1s;
+                $random: random(10)-5;
+                $random2: random(10)-5;
+                //direction is either 1 or -1
+                $direction: if($random > 0, 1, -1);
+                $direction2: if($random2 > 0, 1, -1);
+
+                &:nth-child(#{$i + 1}) {
+                    backface-visibility: hidden;
+                    //conclusion : animation starts from 50vw, 50vh, meaning the 50,50 is the new 0,0
+                    will-change: transform;
+                    transform: translate(
+                        ($direction * 50 + $direction * 100) * 1vw,
+                        (50 * $direction2 + $direction2 * random(100)) * 1vh
+                    );
+                    animation-duration: $t;
+                }
+            }
+        }
+    }
+
+    @keyframes shoot {
+        0% {
+            transform: translate(50vw, 50vh);
+            will-change: transform;
+        }
+    }
+
+    @keyframes fade {
+        to {
+            opacity: 0;
+        }
+    }
+}

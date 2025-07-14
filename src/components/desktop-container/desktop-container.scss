@@ -1,0 +1,31 @@
+@import './sizes.scss';
+
+.desktop-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #f6fafa;
+    padding-top: calc($TOP_BAR_HEIGHT + $CONTENT_PADDING_TOP);
+    padding-right: calc($SIDE_BAR_WIDTH + $CONTENT_PADDING_RIGHT);
+    padding-left: $CONTENT_PADDING_LEFT;
+    padding-bottom: $CONTENT_PADDING_BOTTOM;
+    overflow-y: hidden;
+
+    .content-container {
+        overflow: hidden;
+        position: relative;
+        background-color: white;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.send-gp-desktop-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2rem;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+    background-color: white;
+}

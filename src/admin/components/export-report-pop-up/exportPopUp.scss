@@ -1,0 +1,91 @@
+@import '../../common/styles/colors.admin.scss';
+
+.export-pop-up-container {
+    @include flex(column, center, center);
+
+    width: 40vw;
+
+    .spiner {
+        color: white;
+    }
+
+    .datesWrapper {
+        @include flex(column, center, flex-start);
+
+        padding-top: 2em;
+
+        .export-date-range-label {
+            color: $color-text;
+            font-size: 1.6em;
+            font-family: Rubik-medium;
+            font-size: 1.6rem;
+            cursor: pointer;
+        }
+
+        .date {
+            width: 100%;
+            align-items: center;
+
+            .Form-dateRangeInput-control {
+                margin: 0;
+            }
+
+            .Form-inputContainer {
+                width: 100%;
+            }
+
+            .Form-dateRangeInput-textFields-container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+
+                .MuiOutlinedInput-notchedOutline {
+                    outline: none;
+                }
+            }
+
+            .MuiInputBase-root {
+                height: 3.5em;
+                color: $color-text;
+
+                .MuiInputBase-input {
+                    &::placeholder {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .Form-dateRangeInput {
+                margin-top: 1rem;
+                direction: rtl;
+                width: 100%;
+                border-radius: 10px !important;
+            }
+
+            .MuiInputBase-root {
+                border-radius: 10px !important;
+                background-color: white;
+                border: none;
+                font-family: 'Rubik-regular';
+            }
+
+            .MuiOutlinedInput-notchedOutline {
+                border: none;
+            }
+        }
+    }
+
+    .no-data {
+        color: $forms-error;
+        font-size: 1.2rem;
+        height: 1.5rem;
+    }
+
+    .submit-btn {
+        @include flex(row, center, center);
+        gap: 1vw;
+        width: 100%;
+        padding-top: 1.5rem;
+    }
+}

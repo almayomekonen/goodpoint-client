@@ -1,0 +1,23 @@
+.navbar-desktop {
+    .navbar {
+        width: 100%;
+        display: flex;
+        gap: 0.8rem;
+        margin-top: 0.5rem;
+
+        .text {
+            font-size: 1.2rem;
+            font-family: 'Rubik-regular';
+            color: $dark_blue1;
+        }
+
+        .grey {
+            color: $grey;
+        }
+    }
+
+    .MuiTabs-indicator {
+        background-color: $dark_blue1;
+        height: 3.5px;
+    }
+}

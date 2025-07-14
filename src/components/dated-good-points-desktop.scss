@@ -1,0 +1,24 @@
+.dated-gps-desktop-container {
+    display: flex;
+
+    .dated-gps-desktop {
+        width: 40vw;
+        height: 77vh;
+    }
+
+    .dated-gps-desktop-received-gps {
+        width: 40vw;
+        height: 85vh;
+    }
+
+    .dated-gps-desktop-image-container {
+        display: flex;
+        align-content: center;
+        width: 50%;
+
+        .dated-gps-desktop-image {
+            max-width: 30vw;
+            max-height: 50vh;
+        }
+    }
+}

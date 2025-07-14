@@ -1,0 +1,66 @@
+@import '../common/styles/colors.scss';
+
+.login-mobile {
+    @include flex(column, flex-start, center);
+    height: 100%;
+    gap: 1vh;
+
+    .header {
+        @include flex(column, center, center);
+        background-color: rgba(219, 226, 230, 0.272);
+        height: 12vh;
+        width: 100vw;
+        border-radius: 0 0 50% 50%;
+
+        .logo {
+            height: 3rem;
+        }
+
+        .language {
+            position: absolute;
+            top: 1.5%;
+            left: 0;
+        }
+    }
+
+    .login-form-container {
+        @include flex(column, center, center);
+        width: 100%;
+        flex: 1;
+    }
+
+    .accessibility-button {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        z-index: 10;
+        
+        svg {
+            color: #e91e63 !important;
+            font-size: 2rem !important;
+            cursor: pointer;
+            
+            &:hover {
+                color: #c2185b !important;
+            }
+        }
+    }
+
+    .footer {
+        @include flex(column, center, center);
+        background-color: #c9e5ea3f;
+        height: 9vh;
+        width: 100vw;
+        border-radius: 50% 50% 0% 0%;
+        position: absolute;
+        bottom: 0%;
+        z-index: -1;
+
+        .image-footer {
+            height: 12.5vh;
+            position: absolute;
+            bottom: 10%;
+        }
+    }
+}
+

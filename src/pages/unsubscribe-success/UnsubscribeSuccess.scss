@@ -1,0 +1,42 @@
+.UnsubscribeSuccess {
+    width: 80%;
+    height: 50%;
+    margin: 15% auto;
+    text-align: center;
+
+    p {
+        color: $dark_blue1;
+        font-size: 1.6rem;
+        font-family: 'Rubik-regular';
+    }
+
+    .app-logo {
+        height: 10rem;
+        width: 20rem;
+        transform: translate(10%, -20%);
+    }
+
+    .navigate-home {
+        margin-top: 3rem;
+        font-size: 1.4rem;
+    }
+
+    @media screen and (min-width: 800px) {
+        .placeholder-image {
+            height: 35%;
+            width: 35%;
+            position: absolute;
+            bottom: 15%;
+            left: 0;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        margin: 25% auto;
+        height: 50%;
+
+        .placeholder-image {
+            width: 100%;
+        }
+    }
+}

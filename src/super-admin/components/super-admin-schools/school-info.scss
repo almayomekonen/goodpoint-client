@@ -1,0 +1,174 @@
+.school-info-container {
+    padding-top: 5rem;
+    padding-right: 1.5rem;
+    @include flex(column);
+
+    .school-info-admin-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+    }
+
+    .delete-button {
+        color: grey;
+    }
+
+    .delete-button:hover {
+        color: $blue;
+    }
+
+    .AdminTable-title {
+        margin-top: 1rem;
+        font-weight: 100;
+    }
+
+    .AdminTable-title-container {
+        margin-bottom: 0;
+    }
+
+    .school-info {
+        padding: 2rem;
+        width: 100vw;
+        border-radius: 0.6rem;
+
+        .admin-list-title {
+            font-size: 1.5rem;
+            color: $title-table;
+            font-family: 'Rubik-regular';
+            margin-top: 2rem;
+        }
+
+        .admin-list {
+            margin-top: 1rem;
+            @include flex(row, flex-start, center);
+            flex-wrap: wrap;
+            gap: 2rem;
+
+            .add-admin-button {
+                width: 3rem;
+                height: 3rem;
+                font-size: 2rem;
+                border: 0.2rem solid $red;
+                border-radius: 50%;
+            }
+
+            .admin {
+                border: 0.1rem solid $red;
+                padding: 1rem;
+                border-radius: 1rem;
+                @include flex(row, center, center);
+                gap: 1rem;
+
+                .admin-details {
+                    @include flex(column, center, center);
+                }
+
+                .delete-admin-icon {
+                    color: grey;
+                    cursor: pointer;
+                }
+
+                .delete-admin-icon:hover {
+                    color: $red;
+                }
+            }
+        }
+
+        .school-name {
+            font-size: 2rem;
+            color: $red;
+            font-family: 'Rubik-regular';
+            @include flex(row, flex-start, center);
+            gap: 0.4rem;
+
+            .bold {
+                font-family: 'Rubik-medium';
+            }
+
+            .school-info-back-button {
+                width: 2.5rem !important;
+                height: 2.5rem;
+
+                .school-info-back-icon {
+                    color: $red;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+            }
+        }
+
+        .admin-counts-container {
+            @include flex(row, flex-start, flex-start);
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            gap: 5rem;
+
+            .MuiSkeleton-root {
+                height: 10rem;
+                width: 20rem;
+                transform: none;
+            }
+
+            .teachers-count-container {
+                padding: 2rem 1rem;
+                border-radius: 1rem;
+                min-width: 20rem;
+                width: fit-content;
+                background: white;
+                box-shadow: -3px 5px 15px -1px rgb(211 211 211);
+
+                .count-text {
+                    font-size: 1.5rem;
+                    color: $title-table;
+                    font-family: 'Rubik-regular';
+                    text-align: center;
+                    line-height: 1.5;
+                }
+
+                .count-number {
+                    font-size: 2.2rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.add-admin-radio-group {
+    .Form-radioGroup {
+        @include flex(row, flex-start, flex-start);
+        gap: 2rem;
+    }
+}
+
+.add-admin-form {
+    //getting the username and gender inputs to be on the same line
+    .super-admin-form-inputs:nth-of-type(2) {
+        align-items: flex-end;
+
+        .MuiFormControl-root {
+            width: auto !important;
+            transform: translateY(0.1rem);
+        }
+    }
+}
+
+.admin-already-exists {
+    // height: 5rem;
+    padding: 2rem;
+
+    .admin-already-exists-message {
+        font-size: 1.5rem;
+        color: $red;
+        font-family: 'Rubik-regular';
+        text-align: center;
+        line-height: 1.5;
+    }
+}
+
+.school-admins-table {
+    .AdminTable-paginationFooter-root {
+        background-color: white;
+        width: 95%;
+    }
+}

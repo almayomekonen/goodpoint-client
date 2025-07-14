@@ -1,0 +1,34 @@
+@import '../../common/styles/colors.admin.scss';
+
+.admin-table-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+
+    .title {
+        min-height: 3.5rem;
+        color: $primary;
+        font-size: 1.8125rem;
+        font-family: Rubik-medium;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .secondary-title {
+        color: $primary;
+        font-size: 1.3rem;
+        font-family: Rubik-regular;
+        text-decoration: none;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .admin-table-title {
+        padding: 1rem;
+
+        .title {
+            min-height: 2.5rem;
+        }
+    }
+}

@@ -1,0 +1,135 @@
+@import '../../common/styles/colors.admin.scss';
+
+.excel-pop-up-container {
+    width: 40vw;
+    @include flex(column);
+    padding: 2vh 3vh 2vh 3vh;
+    gap: 1vh;
+    line-height: 2.25rem;
+
+    .instruction-container {
+        text-align: start;
+        color: $color-text;
+        font-size: 1.2rem;
+
+        .instruction-title {
+            font-weight: bold;
+            white-space: break-spaces;
+        }
+
+        li {
+            list-style: none;
+            max-width: 750px;
+            overflow-wrap: break-word;
+        }
+
+        li:before {
+            /* Unicode for checkmark symbol (✓) */
+            content: '\2713';
+            display: inline-block;
+            margin-right: 0.5em;
+        }
+    }
+
+    .Form-fileInput {
+        direction: rtl;
+        color: $blue2_light;
+        font-size: 1.5625em;
+        font-family: 'Rubik-medium';
+        height: 3.4rem;
+
+        .Form-buttonContainer {
+            direction: rtl;
+            @include flex(row-reverse, center, center);
+            gap: 1vw;
+
+            .Form-fileInput-inputText {
+                @include flex(row-reverse, center, center);
+                gap: 1vw;
+                color: $blue2_light;
+                font-size: 1.4em;
+                font-family: 'Rubik-medium';
+            }
+        }
+    }
+
+    .error-excel-container {
+        @include flex(column, flex-start, flex-start);
+
+        padding-bottom: 3vh;
+        padding-right: 2vh;
+
+        .error-excel {
+            font-size: 1.15em;
+            font-family: 'Rubik-light';
+            direction: rtl;
+            text-align: start;
+            text-decoration: none;
+        }
+    }
+
+    .form-Submit-continuer {
+        @include flex(row, space-between, center);
+
+        .download-example-file {
+            background-color: #f5f5f5;
+            color: $blue;
+            border-radius: 0.3rem;
+            border: 1px solid $grey;
+            font-size: 1.2rem;
+        }
+
+        .form-Submit {
+            color: white;
+            font-size: 1.5em;
+            background-color: $dark_blue1;
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            display: flex;
+            gap: 0.5vw;
+            margin-bottom: 1rem;
+            margin-right: auto;
+        }
+
+        .form-Submit:disabled {
+            opacity: 0.4;
+        }
+    }
+}
+
+.error-excel-container {
+    margin: 2vh 2vw 3vh 2vw;
+
+    .error-excel-li {
+        color: $color-text;
+        text-align: start;
+        font-size: 1.375rem;
+        line-height: 1.75;
+    }
+}
+
+@media (max-height: 650px) and (min-width: 500px) {
+    .excel-pop-up-container {
+        .Form-fileInput {
+            width: 22rem;
+            height: 3rem;
+
+            .Form-buttonContainer {
+                .Form-fileInput-inputText {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .form-Submit-continuer {
+            .download-example-file {
+                font-size: 1rem;
+            }
+
+            .form-Submit {
+                font-size: 1rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

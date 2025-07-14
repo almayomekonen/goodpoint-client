@@ -1,0 +1,63 @@
+.top-bar-personal-wrapper {
+    @include flex(column, space-between, center);
+
+    width: 100%;
+    background: linear-gradient(to left, $color-secondary, $blue2);
+    z-index: 3;
+    border: none;
+    position: sticky;
+    top: 0;
+
+    .name {
+        // margin-left: 34vw;
+        color: #fff;
+        font-family: Rubik-light;
+        width: fit-content;
+        max-width: 15vh;
+    }
+
+    .top-bar-top {
+        @include flex(row, center, center);
+
+        width: 100%;
+        height: 100%;
+        gap: 3vh;
+        padding: 2vh;
+    }
+
+    .closeIcon {
+        position: absolute;
+        top: 2;
+        right: 0;
+
+        .icon {
+            color: #fff;
+        }
+    }
+}
+
+.top-bar-bot {
+    height: 100%;
+    width: 100%;
+
+    .spans {
+        background-color: white;
+        padding: 1vh;
+        @include flex(column);
+        font-family: Rubik-medium;
+        padding: 2vh;
+        width: 100%;
+        gap: 1vh;
+
+        .span-header {
+            color: $blue2;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .span-sub-header {
+            color: $color-text;
+            font-size: 1.125rem;
+        }
+    }
+}

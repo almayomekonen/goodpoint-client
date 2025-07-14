@@ -1,0 +1,44 @@
+@mixin formInputs() {
+    .Form-select-container,
+    .Form-autocomplete-container,
+    .Form-textInput-container {
+        width: 15rem;
+    }
+
+    .MuiInputBase-input {
+        height: 1.5rem;
+        padding: 0.8rem;
+    }
+
+    .Form-textInput,
+    .Form-select,
+    .Form-autocomplete,
+    .Form-autocomplete .MuiAutocomplete-inputRoot {
+        background-color: white;
+        height: 2.5rem;
+        border-radius: 10px;
+        min-width: 0px;
+        width: 15rem;
+    }
+
+    .Form-textInput:hover {
+        background-color: white;
+    }
+
+    .Form-autocomplete .MuiAutocomplete-inputRoot .MuiOutlinedInput-notchedOutline {
+        border-radius: 10px;
+    }
+
+    //labels
+    .Form-textInput-control .MuiTypography-root.Form-textInput-label,
+    .MuiTypography-root.Form-select-label,
+    .MuiTypography-root.Form-autocomplete-label {
+        font-family: 'Rubik-medium';
+        font-size: 1.2rem;
+        color: $color-text;
+    }
+
+    .Form-textInput-maxLength {
+        display: none;
+    }
+}

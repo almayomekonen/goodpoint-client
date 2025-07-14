@@ -1,0 +1,43 @@
+@import '../../common/styles/colors.admin.scss';
+
+.toggle-admin-tabs-container {
+    .toggle-area {
+        height: 2.5rem;
+        width: 95%;
+        margin-bottom: 2rem;
+
+        .tabs {
+            font-size: 1.3rem;
+            font-family: 'Rubik-medium';
+            color: $borderColor;
+            cursor: pointer;
+
+            .tab {
+                height: 2rem;
+                padding: 0 2rem 2.35rem 2rem;
+                background: none;
+                color: inherit;
+                border: none;
+                font: inherit;
+                cursor: pointer;
+            }
+
+            .chosen {
+                color: $primary;
+            }
+        }
+
+        .bottom-bar {
+            width: 100%;
+            height: 0.2rem;
+            background-color: #dfe3e4;
+
+            .colored-bottom {
+                position: absolute;
+                background-color: $primary;
+                height: 0.2rem;
+                transition: all 0.5s ease;
+            }
+        }
+    }
+}

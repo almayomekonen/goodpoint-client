@@ -1,0 +1,164 @@
+@import '../../../common/styles/_colors.scss';
+
+.super-admin-school-form-input {
+    border-radius: 2rem !important;
+}
+
+.super-admin-school-form {
+    @include flex(column, center, center);
+    margin-bottom: 1rem;
+    width: 100%;
+    padding-bottom: 1rem;
+    height: 21rem;
+
+    .super-admin-form-inputs {
+        @include flex(row, flex-start, center);
+        gap: 1rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    .Form-textInput-control {
+        gap: 0.2rem;
+    }
+
+    .Form-textInput {
+        font-size: 1.2rem;
+    }
+
+    .super-admin-school-form-title {
+        color: $dark_blue1;
+        margin-bottom: 2rem;
+    }
+
+    .super-admin-submit-button,
+    .super-admin-cancel-button {
+        background-color: $blue;
+        color: white;
+        @include flex(row, center, center);
+        cursor: pointer;
+        height: 4rem;
+        width: 9rem;
+        padding: 0.2rem;
+        border-radius: 13px;
+        font-size: 1.5rem;
+        font-family: 'Rubik-medium';
+    }
+
+    .super-admin-cancel-button {
+        background-color: white;
+        color: $blue;
+        border: 2px solid $grey;
+    }
+}
+
+.super-admin-schools-action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+
+    .school-info-button {
+        width: 1.6rem;
+        height: 1.6rem;
+        transform: translateY(-2%);
+        color: grey;
+    }
+
+    .delete-button {
+        width: 3rem;
+        color: grey;
+    }
+
+    .edit-button {
+        transform: translateY(4%);
+        color: grey;
+    }
+
+    .school-info-button:hover,
+    .delete-button:hover,
+    .edit-button:hover {
+        color: $blue;
+    }
+}
+
+.delete-school-form {
+    @include flex(column, center, center);
+    gap: 2rem;
+
+    .are-you-sure-title {
+        font-family: 'Rubik-regular';
+        font-size: 1.5rem;
+    }
+
+    .are-you-sure-container {
+        @include flex(row, flex-start, flex-start);
+        align-self: flex-start;
+
+        .MuiTypography-root {
+            font-size: 1.1rem;
+        }
+    }
+
+    .delete-school-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        .delete-school-button,
+        .cancel-delete-school-button {
+            background-color: $blue;
+            color: white;
+            @include flex(row, center, center);
+            width: 7rem;
+            height: 3.5rem;
+            cursor: pointer;
+            border-radius: 13px;
+            font-size: 1.5rem;
+            font-family: 'Rubik-medium';
+        }
+
+        .cancel-delete-school-button {
+            background-color: white;
+            color: $blue;
+            border: 2px solid $grey;
+        }
+    }
+}
+
+.super-admin-generic-popup {
+    min-width: 25rem;
+}
+
+.are-you-sure-container {
+    @include flex(row, flex-start, flex-start);
+    align-self: flex-start;
+
+    .are-you-sure-checkbox-container {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: 1rem;
+        border: 1px solid $dark_blue1;
+        border-radius: 0.2rem;
+
+        .are-you-sure-checkbox {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+}
+
+.delete-admin-popup {
+    .title {
+        margin-bottom: 1rem;
+    }
+
+    .checkbox-stack {
+        margin-bottom: 0.6rem;
+    }
+}
+
+.delete-school-popup {
+    padding: 2rem !important;
+}

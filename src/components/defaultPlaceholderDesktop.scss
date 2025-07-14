@@ -1,0 +1,29 @@
+.home-image-desktop {
+    width: 100%;
+    height: 100%;
+    @include flex(column, center, center);
+
+    gap: 2.5rem;
+    padding-bottom: 6rem;
+
+    .default-image {
+        height: 45%;
+        max-height: 28rem;
+    }
+
+    .btn-add-gp {
+        background-color: $dark_blue1;
+        border-radius: 20rem;
+        font-size: 1.5rem;
+        padding-inline: 1.5rem;
+        font-size: $font-very-big;
+    }
+
+    .btn-add-gp:hover {
+        background-color: $dark_blue1;
+    }
+
+    .MuiSvgIcon-root {
+        font-size: 2rem;
+    }
+}

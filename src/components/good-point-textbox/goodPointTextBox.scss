@@ -1,0 +1,83 @@
+@import '../../common/styles/common-styles.scss';
+
+.goodpoint-textbox {
+    .box {
+        @include flex(row, center, center);
+
+        background-color: #f7f7f7;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        height: auto;
+        min-height: $chat-goodpoint-textbox;
+    }
+
+    .textbox-desktop {
+        position: absolute;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .openSentences {
+        bottom: $opening_sentences_storage + $opening_sentences_navbar;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .MuiTextField-root .MuiOutlinedInput-notchedOutline {
+        border: none;
+    }
+
+    .MuiInputBase-root {
+        align-items: flex-end;
+    }
+
+    .MuiInputBase-input {
+        font-family: 'Rubik-light';
+        color: $dark_blue1;
+        font-size: 1.3rem;
+        padding-inline-end: 1rem;
+    }
+
+    ::placeholder {
+        opacity: 1;
+        color: $orange;
+    }
+
+    .startIcons {
+        color: $orange;
+        font-size: 2.5rem;
+        margin-inline-end: 1rem;
+        margin-bottom: 1.3rem;
+        cursor: pointer;
+    }
+
+    .sendIcon {
+        color: $orange;
+        transform: scaleX(-1);
+        height: 1.75rem;
+        margin-bottom: 1rem;
+
+        cursor: pointer;
+    }
+
+    .keyboardIcon {
+        color: #c8c8c9;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-height: 650px) and (min-width: 500px) {
+    .goodpoint-textbox {
+        .box {
+            min-height: 2rem;
+        }
+
+        .openSentences {
+            bottom: 15rem;
+        }
+    }
+}

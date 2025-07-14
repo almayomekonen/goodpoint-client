@@ -1,0 +1,15 @@
+@import '../../common/styles/colors.admin.scss';
+
+@import '../../common/styles/formInputs.admin.scss';
+
+.add-class-popup-content-container {
+    width: 40rem;
+    align-self: center;
+    padding: 2.5rem 3rem 1rem 3rem;
+
+    @include formInputs();
+
+    .first-row {
+        @include flex(row, space-between);
+    }
+}

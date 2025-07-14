@@ -1,0 +1,20 @@
+.generic-loading-button {
+    &.Mui-disabled:disabled {
+        background-color: $dark_blue1;
+        color: white;
+        align-items: center;
+
+        .MuiCircularProgress-root {
+            position: absolute;
+            right: 10%;
+
+            svg {
+                color: white;
+            }
+
+            //Using important because MUI set height and width as inline style.
+            height: 1.8rem !important;
+            width: 1.8rem !important;
+        }
+    }
+}

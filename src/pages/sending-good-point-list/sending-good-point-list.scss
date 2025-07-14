@@ -1,0 +1,98 @@
+.sending-good-point-list-container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 3.5rem;
+
+    .send-gp-container {
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        overflow-x: hidden;
+        position: relative;
+        padding-bottom: 2rem;
+    }
+
+    .sending-good-point-list-header {
+        background-color: white;
+        padding-top: 1.3vh;
+        position: absolute;
+        top: 0%;
+        z-index: 1;
+
+        .sending-good-point-list-users-container-header {
+            color: #eb9266;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.fade-in {
+    animation: 0.1s fade-in linear;
+    animation-iteration-count: 1;
+}
+
+.group-gp-button {
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+    z-index: 10;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    .group-gp-icon {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+.send-group-gp-button {
+    background-color: $blue3;
+    width: 10rem;
+    height: 4rem;
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+    z-index: 10;
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    gap: 0.8rem;
+    @include flex(row, center, center);
+    cursor: pointer;
+
+    .send-group-gp-text {
+        font-size: 1.3rem;
+        font-family: 'Rubik-regular';
+    }
+
+    .send-group-gp-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+.send-gp-sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+    width: 99%;
+    height: 3rem;
+
+    .send-gp-sticky-users-nav {
+        background-color: white;
+        height: 100%;
+        z-index: 1;
+        height: 4rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sending-good-point-list-container .sending-good-point-list-header {
+        padding-top: 1.5vh;
+    }
+}

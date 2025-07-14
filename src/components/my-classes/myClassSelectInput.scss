@@ -1,0 +1,30 @@
+$borderColor: #e3e3e3;
+
+.checkbox-select-input-wrapper {
+    width: 100%;
+    @include flex(row, center, center);
+
+    .MuiOutlinedInput-notchedOutline {
+        border: none;
+    }
+
+    .checkbox-select-input-inner-wrapper {
+        flex-direction: 'row';
+        width: 100%;
+
+        .select-my-classes {
+            border: 1px solid $borderColor;
+            margin: 0.9em;
+            height: 2.6em;
+            padding: 0.2em;
+            border-radius: 10px;
+            font-family: Rubik-light;
+            font-size: 1.2em;
+            color: $dark_blue1;
+        }
+    }
+}
+
+.MyClassSelectInput-menu-text {
+    font-family: Rubik-light;
+}

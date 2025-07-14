@@ -1,0 +1,95 @@
+@import '../desktop-container/sizes.scss';
+
+.login-desktop {
+    .desktop-top-bar-container {
+        height: clamp(5rem, 6vh, 6rem);
+    }
+}
+
+.desktop-top-bar-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: $TOP_BAR_HEIGHT;
+    width: 100vw;
+    background-color: white;
+    box-shadow: 0px 1px 6px #8e8e8e29;
+    @include flex(row, space-between, center);
+
+    padding: 0 1rem 0 3rem;
+    overflow: hidden;
+
+    .top-bar-heart-icon {
+        height: clamp(3rem, 5.5vh, 5rem);
+    }
+
+    .drop-down {
+        @include flex(row, flex-start, center);
+        font-family: 'Rubik-regular';
+        color: $dark_blue1;
+        font-size: 1.3rem;
+        font-weight: 500;
+        cursor: pointer;
+
+        .menu-button {
+            .school-name {
+                color: $dark_blue1;
+                font-size: 1.6rem;
+                font-family: Rubik-light;
+            }
+        }
+
+        .animationArrow {
+            transition: 0.5s;
+            margin-inline: 0.5rem;
+        }
+
+        .animationArrowClose {
+            transform: rotate(-180deg);
+        }
+    }
+
+    .side-bottuns {
+        @include flex(row, flex-start, center);
+        gap: 1.5rem;
+    }
+
+    .school-name {
+        color: $dark_blue1;
+        font-size: 1.3rem;
+        font-family: Rubik-light;
+        font-family: Rubik-regular;
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-height: 730px) {
+    .login-desktop {
+        .desktop-top-bar-container {
+            // height: 3.5rem;
+
+            .lang {
+                font-size: 0.7rem;
+                height: 2rem;
+            }
+
+            // .top-bar-heart-icon {
+            //     width: 2rem;
+            //     height: 2rem;
+            // }
+        }
+
+        .login-desktop-wrapper img.logo {
+            height: 3.5rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+@media screen and (max-height: 600px) {
+    // .desktop-top-bar-container {
+    //     .top-bar-heart-icon {
+    //         height: 3rem;
+    //     }
+    // }
+}

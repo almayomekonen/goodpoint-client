@@ -1,0 +1,10 @@
+@import '../../common/styles/colors.admin.scss';
+.still-in-develop-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 19rem;
+    font-family: 'Rubik-regular';
+    font-size: 2rem;
+    color: $color-text;
+}

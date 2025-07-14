@@ -1,0 +1,96 @@
+.popup-wrapper {
+    backdrop-filter: $popupBlur;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    .MuiBackdrop-root {
+        background-color: transparent;
+    }
+
+    .MuiDialog-container {
+        width: 100%;
+
+        .MuiPaper-root {
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        .MuiDialog-container {
+            width: 90%;
+        }
+    }
+
+    .input {
+        background-color: white;
+        margin-bottom: 1.5em;
+        border-radius: 10px;
+        direction: rtl;
+
+        & ::placeholder {
+            opacity: 1;
+        }
+
+        .MuiFormControlLabel-root {
+            height: 3em;
+            border: $blue1 solid 1px;
+            border-radius: 10px;
+        }
+
+        .Form-textInput {
+            border: none;
+            background-color: transparent;
+            padding: 10px;
+            color: $blue1;
+
+            &.Mui-focused {
+                outline: none;
+            }
+        }
+
+        .Form-errorMsg-container {
+            display: none;
+        }
+    }
+}
+
+.background-wrapper {
+    .scroll {
+        overflow-x: scroll;
+        height: 30em;
+    }
+
+    background-color: white;
+    border-radius: 20px;
+    padding: 1em;
+
+    .checkbox-line {
+        direction: rtl;
+        padding: 3px;
+        margin-bottom: 1.5em;
+        border-radius: 10px;
+        background-color: #f9f9fb;
+        @include flex(row, flex-start, center);
+
+        .checkbox {
+            color: $blue2;
+        }
+
+        .checkbox-label {
+            font-family: Rubik-Regular;
+            font-size: 1.4em;
+        }
+    }
+
+    .popup-button-wrapper {
+        .button {
+            background-color: #cde7ec;
+            font-family: Rubik-medium;
+            color: $dark_blue1;
+
+            width: 100%;
+            color: dark_blue1;
+            border-radius: 10px;
+            height: 2.3em;
+            font-size: 1.5em;
+        }
+    }
+}

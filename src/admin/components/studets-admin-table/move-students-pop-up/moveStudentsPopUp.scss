@@ -1,0 +1,14 @@
+.move-students-popup-container {
+    @include flex(column, center, center);
+    gap: 2vh;
+    padding: 2vh;
+
+    .move-students-select-container {
+        // @include flex(column, flex-start, flex-start);
+        gap: 2vw;
+    }
+
+    .warning-text {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,90 @@
+.bottomNavbar {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+
+    .navbar {
+        background-color: white;
+        height: 5rem;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        @include flex(row, center, center);
+        box-shadow: 0px 0px 3.188rem -0.625rem rgb(0 0 0 / 25%);
+        background: radial-gradient(
+            circle at top center,
+            rgba(255, 255, 255, 0),
+            #e6e6e6 3rem,
+            rgb(255, 255, 255) 0px,
+            #ffffff
+        );
+    }
+
+    .add-gp-button {
+        width: 4.8rem;
+        height: 4.8rem;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 2.3rem;
+        left: 50%;
+        transform: translate(-50%, -3%);
+        background-color: $light_blue1;
+    }
+
+    .add-gp-button-container {
+        .css-17hpyb5-MuiButtonBase-root-MuiButton-root {
+            position: static;
+            line-height: normal;
+            padding: 0;
+        }
+    }
+
+    .circle {
+        height: 7rem;
+    }
+
+    .plus {
+        font-family: 'Rubik-light';
+        color: $dark_blue1;
+        font-size: 4rem;
+    }
+
+    .inner-navbar {
+        width: 75%;
+        padding-top: 0.75rem;
+    }
+
+    .icons {
+        @include flex(row, space-between, flex-end);
+
+        .css-1yetf8k-MuiButtonBase-root-MuiButton-root {
+            line-height: normal;
+            padding: 0;
+            flex-direction: column;
+        }
+    }
+
+    .icon {
+        height: 2.5rem;
+        margin-bottom: -0.8rem;
+    }
+
+    .text {
+        font-family: 'Rubik-regular';
+        color: $dark_blue1;
+        font-size: 1rem;
+    }
+
+    .grey {
+        color: #cdccd1;
+    }
+
+    .nav-bar-no-icon-text {
+        transform: translate(0.1rem, -0.3rem);
+    }
+
+    .nav-bar-text-container {
+        @include flex(column, center, center);
+        padding: 0;
+        // transform: translateY(0.1rem);
+    }
+}

@@ -17,6 +17,16 @@ export default defineConfig(({ mode }) => {
             },
             port: 3000,
         },
+        build: {
+            rollupOptions: {
+                output: {
+                    manualChunks: {
+                        vendor: ['react', 'react-dom'],
+                        auth: ['@hilma/auth'],
+                    },
+                },
+            },
+        },
         css: {
             preprocessorOptions: {
                 scss: {

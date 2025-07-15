@@ -7,7 +7,13 @@ import { parseJwt } from '../functions/decodeToken';
 import { UserInfoContextType } from './UserContext';
 
 const socketUri =
-    import.meta.env.MODE !== 'development' ? window.location.origin : import.meta.env.VITE_LOCAL_IP || 'localhost:8080';
+    import.meta.env.MODE !== 'development'
+        ? import.meta.env.VITE_SOCKET_URL || import.meta.env.VITE_SERVER_URL || window.location.origin
+        : import.meta.env.VITE_LOCAL_IP || 'localhost:8080';
+
+console.log('Socket URI:', socketUri);
+console.log('VITE_SOCKET_URL:', import.meta.env.VITE_SOCKET_URL);
+console.log('MODE:', import.meta.env.MODE);
 export const socket = io(socketUri);
 export type ReceivedGp = {
     gpId: number;

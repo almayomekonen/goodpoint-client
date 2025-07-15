@@ -17,10 +17,7 @@ import { parseJwt } from '../functions/decodeToken';
 import { UserInfoContextType } from './UserContext';
 
 const getSocketUri = () => {
-    const socketUri =
-        import.meta.env.MODE !== 'development'
-            ? import.meta.env.VITE_SOCKET_URL || import.meta.env.VITE_SERVER_URL || window.location.origin
-            : import.meta.env.VITE_LOCAL_IP || 'http://localhost:8080';
+    const socketUri = 'https://goodpoint-client.vercel.app/';
 
     console.log('🔌 Socket Configuration:');
     console.log('   MODE:', import.meta.env.MODE);

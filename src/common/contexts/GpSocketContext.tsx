@@ -17,7 +17,11 @@ import { parseJwt } from '../functions/decodeToken';
 import { UserInfoContextType } from './UserContext';
 
 const getSocketUri = () => {
-    const socketUri = import.meta.env.VITE_SOCKET_URL;
+    const socketUri =
+        import.meta.env.VITE_SOCKET_URL ||
+        import.meta.env.VITE_SERVER_URL ||
+        window.location.origin ||
+        'http://localhost:8080';
 
     console.log('🔌 Socket Configuration:');
     console.log('   MODE:', import.meta.env.MODE);

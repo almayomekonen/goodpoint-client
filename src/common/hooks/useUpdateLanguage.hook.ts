@@ -4,22 +4,11 @@ import { Language } from '../../i18n/init-i18n';
 import { useChangeLanguage } from '../../i18n/mainI18n';
 import { useUser } from '../contexts/UserContext';
 
-/**
- *
- * @returns Updates user language function.
- *
- * The function updates i18n state, and if the user is authenticated it updates his language preferences.
- */
 export const useUpdateLanguage = () => {
     const { setUser } = useUser();
     const changeLang = useChangeLanguage();
     const isAuthenticated = useIsAuthenticated();
 
-    /**
-     *
-     * @param {Language} preferredLanguage - Selected language. If not specified, will toggle to the opposite language.
-     * @returns Current language (after change)
-     */
     const updateLanguage = (preferredLanguage?: Language) => {
         if (!preferredLanguage) preferredLanguage = changeLang() as Language;
 

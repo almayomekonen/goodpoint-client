@@ -3,10 +3,6 @@ import { useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-/**
- * Custom hook for logging out the user.
- * @returns {Function} logout function
- */
 export const useAppLogout = () => {
     const queryClient = useQueryClient();
     const _logout = useLogout();

@@ -338,10 +338,11 @@ function App() {
 export default provide(
     [
         AuthProvider,
+
         {
             logoutOnUnauthorized: true,
             accessTokenCookie: ACCESS_TOKEN_NAME,
-            baseURL:
+            apiUrl:
                 import.meta.env.MODE === 'production'
                     ? import.meta.env.VITE_SERVER_URL || 'https://goodpoint-server-production.up.railway.app'
                     : 'http://localhost:8080',

@@ -1,15 +1,26 @@
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA, VitePWAOptions } from 'vite-plugin-pwa';
-// https://vitejs.dev/config/
+
 export default defineConfig(({ mode }) => {
-    process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
+    const env = loadEnv(mode, process.cwd(), '');
+
+    // בחר את הכתובת הנכונה בהתאם לסביבה
+    const apiTarget =
+        mode === 'production'
+            ? env.VITE_SERVER_URL || 'https://goodpoint-server-production.up.railway.app'
+            : 'http://localhost:8080';
+
+    console.log('🔧 Vite Config:');
+    console.log('   Mode:', mode);
+    console.log('   API Target:', apiTarget);
+    console.log('   VITE_SERVER_URL:', env.VITE_SERVER_URL);
 
     return {
         server: {
             proxy: {
                 '/api': {
-                    target: 'http://localhost:8080',
+                    target: apiTarget,
                     changeOrigin: true,
                     secure: false,
                     ws: true,

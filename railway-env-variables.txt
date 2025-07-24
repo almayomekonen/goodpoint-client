@@ -3,8 +3,8 @@
 # ========================================
 
 # Server URL Configuration
-VITE_SERVER_URL=https://your-server-railway-url.up.railway.app
-VITE_SOCKET_URL=https://your-server-railway-url.up.railway.app
+VITE_SERVER_URL=https://goodpoint-server-production.up.railway.app
+VITE_SOCKET_URL=https://goodpoint-server-production.up.railway.app
 
 # Firebase Configuration
 VITE_FIREBASE_API_KEY=your-firebase-api-key

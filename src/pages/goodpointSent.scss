@@ -1,0 +1,58 @@
+.gp-sent {
+    &.fade-in {
+        -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+        animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    }
+
+    @include flex(column, center, center);
+    gap: 4vh;
+    height: 90vh;
+
+    .gp-sent-img {
+        height: 28rem;
+    }
+
+    .gp-sent-text {
+        color: $orange;
+        font-family: 'Rubik-Medium';
+        font-size: 2.5rem;
+    }
+
+    .confetti {
+        position: absolute;
+        top: 0;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .gp-sent {
+        .gp-sent-img {
+            height: 18rem;
+        }
+
+        .gp-sent-text {
+            font-size: 1.75rem;
+        }
+
+        .confetti {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-height: 650px) and (min-width: 500px) {
+    .gp-sent {
+        .gp-sent-img {
+            height: 16rem;
+        }
+
+        .gp-sent-text {
+            font-size: 1.5rem;
+        }
+
+        .confetti {
+            width: 100%;
+        }
+    }
+}

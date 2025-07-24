@@ -1,0 +1,28 @@
+@mixin isRequired($selector) {
+    &:has([data-isrequired='true']) {
+        #{$selector}::after {
+            content: ' *';
+            color: red;
+        }
+    }
+}
+
+.Form-textInput-container {
+    @include isRequired('.Form-textInput-label');
+}
+
+.Form-select-container {
+    @include isRequired('.Form-select-label');
+}
+
+.radio-group-container {
+    @include isRequired('.Form-radio-group-label');
+}
+
+.Form-radioGroup-container {
+    @include isRequired('.Form-radioGroup-label');
+}
+
+.export-pop-up-container {
+    @include isRequired('.export-date-range-label');
+}

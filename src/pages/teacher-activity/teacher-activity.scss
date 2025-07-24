@@ -1,0 +1,11 @@
+.teacher-activity-mobile-container {
+    width: 100vw;
+    height: 90%;
+}
+
+.fixed-dated-gps {
+    //fixes bug where the sticky date gets scrolled too high
+    position: fixed;
+    top: 5.7rem; //based on the height of the header
+    left: 0;
+}

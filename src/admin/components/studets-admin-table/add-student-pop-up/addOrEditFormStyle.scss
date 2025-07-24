@@ -1,0 +1,169 @@
+@import '../../../common/styles/colors.admin.scss';
+
+@mixin input-design {
+    background-color: white;
+    color: $color-text;
+    border: 1px solid $border-grey;
+    border-radius: 11px;
+    width: 15rem;
+    font-family: 'Rubik-light';
+    font-size: 1.2rem;
+    outline-width: 1px;
+
+    &.Form-error {
+        border-width: 1px;
+    }
+
+    &:hover {
+        border: 1px solid $dark_blue1;
+    }
+}
+
+.add-or-edit-container {
+    width: 100%;
+
+    .pop-add-container {
+        @include flex(column, center, center);
+
+        gap: 2vh;
+        margin-top: 3rem;
+        width: 40vw;
+
+        .add-row {
+            @include flex(row, flex-start, space-between);
+            flex-wrap: wrap;
+
+            column-gap: 0.5rem;
+            width: 90%;
+            row-gap: 1rem;
+
+            .flex-box-elem {
+                flex: 48%;
+                margin-inline: auto;
+                display: flex;
+
+                &:last-child {
+                    margin: 0;
+                    max-width: 50%;
+                }
+            }
+        }
+
+        .Form-textInput-container {
+            align-items: center;
+        }
+
+        .Form-select-container {
+            width: min-content;
+        }
+
+        .submit-btn {
+            justify-content: center;
+        }
+    }
+
+    .Form-textInput-container {
+        @include flex(column, flex-start, flex-start);
+
+        color: $color-text;
+        width: 17rem;
+
+        .Form-textInput-maxLength {
+            display: none;
+        }
+
+        .MuiTypography-root.Form-textInput-label {
+            font-family: 'Rubik-medium';
+            font-size: 1.3rem;
+            color: $color-text;
+        }
+
+        .Form-textInput {
+            @include input-design();
+            padding: 1.3rem 3%;
+        }
+    }
+
+    .Form-select-container {
+        .Form-select {
+            @include input-design();
+            padding: 1.3rem 0;
+
+            .MuiOutlinedInput-notchedOutline {
+                border: none;
+            }
+
+            &.Mui-focused {
+                outline: 1px solid $dark_blue1;
+
+                &.Form-error {
+                    border: 1px solid transparent;
+                    outline: 1px solid $forms-error;
+                }
+            }
+        }
+
+        .Form-select-label {
+            font-family: 'Rubik-medium';
+            font-size: 1.3rem;
+            color: $color-text;
+        }
+    }
+
+    .radio-group-container {
+        @include flex(column, flex-start, flex-start);
+        width: 15rem;
+
+        .Form-radioGroup {
+            display: flex;
+            flex-direction: row !important;
+            width: 15rem;
+        }
+
+        .Form-radio-group-label {
+            font-family: 'Rubik-medium';
+            font-size: 1.3rem;
+            color: $color-text;
+        }
+    }
+
+    .Form-errorMsg-container {
+        width: 15rem;
+    }
+
+    .submit-btn {
+        @include flex(row);
+
+        gap: 2rem;
+        width: 95%;
+    }
+
+    .edit-row {
+        @include flex(row, flex-start, flex-start);
+        flex-wrap: wrap;
+        width: 100%;
+
+        .flex-box-elem {
+            flex: 24%;
+            max-width: 25%;
+        }
+    }
+
+    .edit-container {
+        .Form-submitButton {
+            color: white;
+            align-self: flex-start;
+            font-size: 1.25rem;
+            font-family: 'Rubik-regular';
+            background-color: $dark_blue1;
+            border-radius: 11px;
+            padding: 0.5vh 1vh;
+            width: 10rem;
+            margin-top: 1rem;
+        }
+    }
+
+    .Form-errorMsg {
+        margin: 0;
+    }
+}

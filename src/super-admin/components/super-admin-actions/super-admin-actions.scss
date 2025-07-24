@@ -1,0 +1,60 @@
+.super-admin-actions {
+    font-family: 'Rubik-medium';
+    color: $color-text;
+
+    .actions-stack {
+        padding: 1.5vw;
+        width: 95%;
+        background-color: white;
+        height: 100%;
+        min-height: 75vh;
+
+        .super-admin-actions__action {
+            @include flex(column);
+            gap: 2rem;
+
+            .super-admin-actions__title {
+                margin-bottom: 1rem;
+                color: $red;
+                font-family: 'Rubik-light';
+                text-decoration: underline;
+                font-size: 1.5rem;
+            }
+
+            .super-admin-actions__description {
+                white-space: break-spaces;
+                font-family: 'Rubik-regular';
+                font-size: larger;
+                line-height: 1.5;
+            }
+
+            .super-admin-actions__action-button {
+                width: 20%;
+                float: right;
+                margin-top: 2rem;
+                font-family: 'Rubik-medium';
+                font-size: large;
+                padding-block: 0.5rem;
+            }
+        }
+    }
+}
+
+.actions-popup {
+    .content,
+    .children {
+        font-size: 1.3rem;
+        padding: 2rem 0.8rem;
+        color: $color-text;
+        white-space: break-spaces;
+    }
+
+    .checkbox-stack {
+        padding-inline-start: 1rem;
+        color: $color-text;
+    }
+
+    .checkbox-label {
+        cursor: pointer;
+    }
+}

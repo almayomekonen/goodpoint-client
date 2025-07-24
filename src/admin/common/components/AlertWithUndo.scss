@@ -1,0 +1,14 @@
+.alert-with-undo {
+    display: flex;
+    align-items: center;
+
+    .undo-btn {
+        text-decoration: underline;
+    }
+}
+
+.MuiAlert-root:has(.alert-with-undo) {
+    .MuiIconButton-root {
+        display: none;
+    }
+}

@@ -1,0 +1,98 @@
+@import '../common/styles/common-styles.scss';
+
+@media screen and (max-width: 800px) {
+    .chat-container {
+        position: fixed;
+        top: calc($header_height - 0.3rem);
+        left: 0;
+        width: 100%;
+    }
+}
+
+.chat-container {
+    //this for some reason allows to have position sticky on inner components
+    .infinite-scroll-component {
+        overflow: visible !important;
+    }
+
+    .no_gp_message {
+        font-family: 'Rubik-regular';
+        font-size: 1.5rem;
+        color: $orange;
+        text-align: center;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    #scrollableDiv {
+        overflow: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        height: calc(105dvh - $header_height - $chat_goodpoint_textbox - 1rem);
+        padding: 2rem;
+        padding-bottom: 0.3;
+        padding-top: 0.5rem;
+
+        &.chat-desktop {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            height: calc(86vh - $header_height - $chat_goodpoint_textbox - 1rem);
+        }
+
+        &.presetMessages {
+            height: calc(
+                100vh - $header_height - $chat_goodpoint_textbox - 1rem - $opening_sentences_storage -
+                    $opening_sentences_navbar
+            );
+        }
+
+        &.chat-desktop.presetMessages {
+            height: calc(
+                86vh - $header_height - $chat_goodpoint_textbox - 1rem - $opening_sentences_storage -
+                    $opening_sentences_navbar
+            );
+        }
+    }
+
+    .item-enter {
+        transform: translate(0, 100px);
+    }
+
+    .item-enter-active {
+        transform: translateY(0);
+        transition:
+            all,
+            transform 500ms;
+    }
+
+    .chat-gp-date-block {
+        @include flex(column-reverse, center);
+        direction: rtl;
+
+        .chat-gp-sticky-date-container {
+            z-index: 100;
+            position: sticky;
+            width: fit-content;
+            right: 50%;
+            transform: translateX(53%);
+            top: 1%;
+        }
+    }
+}
+
+@media screen and (max-height: 650px) and (min-width: 500px) {
+    .chat-container {
+        #scrollableDiv {
+            &.chat-desktop.presetMessages {
+                height: calc(
+                    99vh - $header_height - $chat_goodpoint_textbox - 1rem - $opening_sentences_storage -
+                        $opening_sentences_navbar
+                );
+            }
+        }
+    }
+}

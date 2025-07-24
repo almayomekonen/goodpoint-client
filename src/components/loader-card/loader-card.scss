@@ -1,0 +1,26 @@
+.loading-user-card {
+    height: 10vh;
+    // justify-content: center;
+    gap: 5vw;
+    align-items: center;
+
+    .loading-user-card-profile-icon {
+        background: #f3f6f7 0% 0% no-repeat padding-box;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+    }
+
+    .loading-user-card-text {
+        width: 30vw;
+        height: 5vh;
+        background: #f3f6f7 0% 0% no-repeat padding-box;
+    }
+}
+
+.loader-nav-bar-icon {
+    width: 30vw;
+    height: 5vh;
+    background: #f3f6f7 0% 0% no-repeat padding-box;
+    border-radius: 1.5rem;
+}

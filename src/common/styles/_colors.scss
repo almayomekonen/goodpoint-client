@@ -1,0 +1,35 @@
+//! במטרה ששמות הצבעים יהיו תואמים לצבעים בקובץ main.tsx
+//! before adding new colors, check to see if your new color **already exists and has a NAME** in `main.tsx`. (And if so, please use the same name. yay)
+$blue: #5e6c94;
+$blue1: #5baab2;
+$blue2: #548d8d;
+$blue3: #26386e;
+
+$light_blue1: #cde7ec;
+$light_blue2: #f6fafa;
+$light_blue3: #cae1e3;
+$dark_blue1: #081d5a; // dark_blue1
+
+$color-secondary: #4c9586;
+$color-accent: #63b5ca;
+$color-background-off-white: #f3f6f7;
+$color-text: #154754;
+$border-grey: #dbe2e6;
+$red: #d72465;
+$dark_red: #b10544;
+
+$forms-error: #d32f2f;
+$blue2: #548d8d;
+$blue2_light: #548d8db8;
+$title-table: #154754;
+
+//In send animation, the svg should get str color.
+$orange: #eb9266;
+$orange_str: 'EB9266';
+
+$popupBlur: blur(7px);
+$light_grey: #dbe2e6;
+$grey: #9fa7bf;
+$borderColor: #9fa7bf;
+$user_card_border: #ebebeb;
+$grey2: #d5d5d7;

@@ -1,0 +1,142 @@
+.top-bar-wrapper {
+    width: 100%;
+    height: 3rem;
+    @include flex(row, space-between, center);
+
+    z-index: 3;
+    border: none;
+    position: sticky;
+    top: 0;
+    margin-bottom: 1rem;
+
+    .new-messages-button {
+        width: auto;
+        width: 2rem;
+        margin-inline: 4%;
+        transform: translateY(10%);
+        position: relative;
+
+        .icon {
+            font-size: 1.8rem;
+            fill: $dark_blue1;
+        }
+
+        .unread-gps-counter {
+            font-size: 1em;
+            position: absolute;
+            right: -40%;
+            top: -20%;
+            color: $red;
+            font-family: Rubik-regular;
+        }
+    }
+
+    .name {
+        font-family: Rubik-light;
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .MenuIcon {
+        font-size: 2em;
+        margin-right: 0.5em;
+    }
+}
+
+.side-bar {
+    .MuiPaper-root {
+        border-top-left-radius: 50px;
+    }
+
+    .side-bar-menu {
+        width: 75vw;
+        min-width: 270px;
+        height: 100%;
+        @include flex(column, space-between);
+        overflow-x: hidden;
+
+        .top-menu {
+            .close-line {
+                @include flex(row, flex-start, flex-end);
+
+                width: 100%;
+                height: 10%;
+                margin: 1% 0 2% 0;
+                padding-right: 0.5em;
+
+                .close-icon {
+                    font-size: 2rem;
+                    color: $dark_blue1;
+                }
+            }
+
+            .menu-line {
+                @include flex(row, flex-start, center);
+
+                width: 100%;
+                height: 18%;
+
+                .text {
+                    color: $dark_blue1;
+                    font-family: Rubik-medium;
+                    font-size: 1.4em;
+                    white-space: nowrap;
+                }
+
+                .menu-icon {
+                    color: $dark_blue1;
+                    margin-inline-end: 1em;
+                    font-size: 2em;
+                }
+            }
+        }
+
+        .bottom-menu {
+            .ListItemButton {
+                padding: 0;
+
+                .menu-line {
+                    @include flex(row, flex-start, center);
+
+                    width: 100%;
+                    padding: 0;
+
+                    .text {
+                        color: $dark_blue1;
+                        font-family: Rubik-Regular;
+                        font-size: 1.4em;
+                        white-space: nowrap;
+                    }
+
+                    .menu-icon {
+                        color: $dark_blue1;
+                        margin-inline-end: 1rem;
+                        font-size: 2rem;
+                    }
+                }
+
+                .highlight {
+                    background-color: #cae1e3;
+                }
+            }
+
+            .container {
+                display: flex;
+                align-items: center;
+
+                .border {
+                    border-bottom: 1px solid $dark_blue1;
+                    width: 100%;
+                }
+
+                .content {
+                    white-space: nowrap;
+                    padding: 0 10px;
+                    font-family: Rubik-Regular;
+                    font-size: 1.2em;
+                    color: $dark_blue1;
+                }
+            }
+        }
+    }
+}

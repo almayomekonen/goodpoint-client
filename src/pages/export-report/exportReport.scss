@@ -1,0 +1,239 @@
+$border-color: #c7c7c7;
+$border-width: 1px;
+
+.export-form {
+    width: 100%;
+    height: 100%;
+}
+
+.main-page-export-report {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+
+    .titled-page {
+        width: 100%;
+    }
+}
+
+.reportMainWrapper {
+    width: 100%;
+}
+
+.Form-body .reportMainWrapper {
+    font-family: Rubik-light;
+    @include flex(column, flex-start, center);
+
+    font-size: 0.85em;
+    height: 100%;
+
+    .Form-label:not(.Form-radioButton-label),
+    .Form-textInput-label {
+        color: $dark_blue1;
+        font-size: $font-big;
+        font-family: Rubik-medium;
+    }
+
+    .flexColumn {
+        @include flex(column, space-between, flex-start);
+        width: 80%;
+
+        font-size: 1.2em;
+        color: $dark_blue1;
+    }
+
+    .chooseClassWrapper {
+        padding-top: 2em;
+
+        .gradeInput {
+            margin-block: 1em;
+            align-self: center;
+            justify-self: center;
+            width: 100%;
+
+            .Form-select {
+                height: 3.5em;
+
+                &.Form-error {
+                    .MuiOutlinedInput-notchedOutline {
+                        border-width: $border-width;
+                        border-color: $forms-error;
+                    }
+                }
+
+                .MuiOutlinedInput-notchedOutline {
+                    border-width: $border-width;
+                    outline-width: $border-width;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    .forWhoWrapper {
+        .label {
+            margin-bottom: 0.5em;
+        }
+
+        .input-button {
+            margin-block: 1em;
+            width: 100%;
+            background-color: white;
+            box-shadow: none;
+            border-radius: 10px;
+            border: $border-color solid $border-width;
+            @include flex(row, space-between);
+
+            color: black;
+            height: 3em;
+            font-size: 1rem;
+
+            align-items: center;
+
+            .button-placeholder {
+                opacity: 0.5;
+            }
+        }
+
+        .radio {
+            .Form-errorMsg-container {
+                display: none;
+            }
+
+            .Form-radioButton-label {
+                font-size: $font-small;
+            }
+        }
+
+        .inputAutocomplete {
+            background-color: transparent;
+            border-radius: 10px;
+            outline: none;
+
+            .MuiInputBase-root {
+                height: 3em;
+            }
+
+            .MuiInputBase-input {
+                color: $dark_blue1;
+            }
+        }
+
+        .oval-wrapper {
+            @include flex(row);
+
+            flex-wrap: wrap;
+            gap: 0.5em;
+        }
+    }
+
+    .datesWrapper {
+        padding-top: 2em;
+
+        .label {
+            color: $dark_blue1 !important;
+            font-size: $font-big !important;
+            font-family: Rubik-medium;
+        }
+
+        .date {
+            width: 100%;
+
+            .Form-dateRangeInput-control {
+                margin: 0;
+            }
+
+            .Form-inputContainer {
+                width: 100%;
+            }
+
+            svg {
+                color: $dark_blue1;
+            }
+
+            .Form-dateRangeInput-textFields-container {
+                @include flex(column, flex-start, center);
+                width: 100%;
+            }
+
+            .MuiInputBase-root {
+                height: 3.5em;
+                color: $dark_blue1;
+                height: clamp(6vh, 3em, 10vh);
+                font-size: $font-very-small;
+
+                .MuiInputBase-input {
+                    &::placeholder {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .Form-dateRangeInput {
+                margin-top: 1em;
+
+                direction: rtl;
+                width: 100%;
+
+                &.Form-error {
+                    .MuiOutlinedInput-notchedOutline {
+                        border-width: $border-width;
+                        border-color: $forms-error;
+                    }
+                }
+            }
+
+            .MuiOutlinedInput-notchedOutline {
+                border-width: $border-width;
+                outline-width: $border-width;
+            }
+
+            .MuiInputBase-root {
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .no-data {
+        color: $forms-error;
+        font-size: 1.2rem;
+        height: 1.5rem;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .input {
+        .Form-textInput {
+            height: 2.5em;
+            border-radius: 10px;
+            background-color: transparent;
+            padding: 10px;
+
+            .MuiInputBase-input {
+                color: $dark_blue1;
+            }
+
+            &.Mui-focused {
+                outline-width: $border-width;
+            }
+        }
+    }
+
+    .stick-to-bottom {
+        margin-top: auto;
+    }
+
+    .button {
+        margin-bottom: 1em;
+        margin-top: 1em;
+        background-color: #cde7ec;
+        font-family: Rubik-medium;
+
+        width: 80%;
+        color: $dark_blue1;
+        border-radius: 10px;
+        height: 2.3em;
+        font-size: 1.5em;
+        box-shadow: none;
+    }
+}

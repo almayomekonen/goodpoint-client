@@ -1,0 +1,24 @@
+.admin-table-delete-popup-container {
+    width: 100%;
+
+    .inner-delete-popup {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        font-size: 1.5rem;
+        direction: rtl;
+        align-items: center;
+
+        .MuiTypography-root.Form-label {
+            font-size: 1.5rem;
+        }
+    }
+
+    .buttons {
+        width: fit-content;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+}

@@ -1,0 +1,55 @@
+.studentsList {
+    height: 98%;
+
+    .top-bar {
+        @include flex(column);
+    }
+
+    .header-class-desktop {
+        @include flex(row, center, center);
+        height: 6%;
+        margin-top: 1rem;
+        padding: 0.75rem;
+        border-bottom: solid 1px $light_grey;
+    }
+
+    .list {
+        background-color: white;
+        margin-top: 5%;
+        width: 100%;
+        @include flex(column, flex-start, center);
+
+        overflow-y: auto;
+        height: 70%;
+
+        .search_message {
+            font-family: 'Rubik-regular';
+            font-size: 1.5rem;
+            color: $orange;
+            margin-top: 10%;
+        }
+    }
+
+    .row {
+        width: 90%;
+        display: flex;
+    }
+
+    .selected {
+        background-color: $light_blue2;
+    }
+
+    .user-card-border:not(:last-child) {
+        border-bottom: 1px $user_card_border solid;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .studentsList {
+        height: 100vh;
+
+        .list {
+            height: 100%;
+        }
+    }
+}

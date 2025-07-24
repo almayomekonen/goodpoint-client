@@ -1,0 +1,30 @@
+.checkbox-stack {
+    @include flex(row-reverse, flex-end, center);
+
+    .checkbox-button {
+        width: 2rem;
+        height: 2rem;
+        border: 1.5px solid $blue3;
+        border-radius: 0.2rem;
+        margin-left: 2rem;
+        @include flex(row, center, center);
+
+        transition: all 0.1s;
+        cursor: pointer;
+        background-color: transparent;
+
+        .checked-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: white;
+        }
+    }
+
+    .checkbox-label {
+        font-size: 1.2rem;
+    }
+}
+
+.checkbox-button.checked {
+    background-color: $blue3;
+}

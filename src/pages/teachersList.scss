@@ -1,0 +1,68 @@
+@import '../common/styles/common-styles.scss';
+
+.teacher-list {
+    height: 100%;
+
+    .title {
+        margin-inline-start: 5%;
+        color: $dark_blue1;
+        font-family: 'Rubik-medium';
+        font-size: 1.5rem;
+        margin-bottom: 0rem;
+    }
+
+    .list {
+        background-color: white;
+        margin-top: 5%;
+        width: 100%;
+        @include flex(column, flex-start, center);
+
+        margin-bottom: $navbar_height;
+        overflow-y: auto;
+        height: 75%;
+
+        .search_message {
+            font-family: 'Rubik-regular';
+            font-size: 1.5rem;
+            color: $orange;
+            margin-top: 10%;
+        }
+
+        .row {
+            width: 90%;
+            display: flex;
+        }
+
+        .selected {
+            background-color: $light_blue2;
+        }
+
+        .user-card-border:not(:last-child) {
+            border-bottom: 1px $user_card_border solid;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .teacher-list {
+        height: 100vh;
+
+        .list {
+            height: 79%;
+        }
+    }
+}
+
+@media screen and (max-height: 650px) {
+    .teacher-list {
+        padding-bottom: 3rem;
+    }
+}
+
+@media screen and (max-height: 850px) and (min-width: 800px) {
+    .teacher-list {
+        .list {
+            height: 70%;
+        }
+    }
+}

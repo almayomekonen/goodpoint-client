@@ -1,0 +1,50 @@
+.good-point-receiver-list {
+    @include flex(column);
+
+    gap: 2vh;
+    direction: rtl;
+    padding-right: 6vw;
+    padding-left: 6vw;
+    padding-bottom: 3rem;
+    padding-top: 2rem;
+
+    .good-point-receiver-letter-group {
+        @include flex(column, flex-start, flex-start);
+
+        .group-letter {
+            color: #5c766d;
+            font-size: 1.5rem;
+            margin-right: 1.8rem;
+            margin-bottom: 0.6rem;
+        }
+    }
+
+    .good-point-receiver-students-group {
+        @include flex(column);
+
+        gap: 2vh;
+        width: 100%;
+    }
+}
+
+.loading-icon {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: grey;
+}
+
+.card-footer-description-container {
+    padding-right: 0vw;
+    @include flex(row, space-between);
+
+    margin-top: -2vh;
+    direction: rtl;
+}
+
+.no-students-found-message {
+    font-family: 'Rubik-regular';
+    color: $dark_blue1;
+}

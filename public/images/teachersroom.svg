@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="40.709" viewBox="0 0 50 40.709">
+  <g id="Group_9" data-name="Group 9" transform="translate(-57 -794.291)">
+    <g id="group" transform="translate(64.184 794.291)">
+      <path id="Path_8" data-name="Path 8" d="M20.131,25.339a3.746,3.746,0,1,1-3.75-3.749,3.752,3.752,0,0,1,3.75,3.749Z" transform="translate(-8.518 -16.628)" fill="#081D5A"/>
+      <circle id="Ellipse_5" data-name="Ellipse 5" cx="5.664" cy="5.664" r="5.664" transform="translate(12.606)" fill="#081D5A"/>
+      <path id="Path_9" data-name="Path 9" d="M44.862,21.59a3.749,3.749,0,1,1-3.742,3.749A3.752,3.752,0,0,1,44.862,21.59Z" transform="translate(-16.185 -16.628)" fill="#081D5A"/>
+      <path id="Path_10" data-name="Path 10" d="M54.41,37.284v2.471a.725.725,0,0,1-.475.685,21.582,21.582,0,0,1-4.787,1.141V38.1a6.825,6.825,0,0,0-1.769-4.6,5.138,5.138,0,0,0,1.893-.709c2.265.54,5.122,1.783,5.137,4.494Z" transform="translate(-17.871 -19.643)" fill="#081D5A"/>
+      <path id="Path_11" data-name="Path 11" d="M39.293,37.568v3.463a1.459,1.459,0,0,1-.964,1.374,31.323,31.323,0,0,1-21.164,0,1.459,1.459,0,0,1-.965-1.374V37.568c.007-4.1,4.348-5.97,7.761-6.768a7.112,7.112,0,0,0,7.578,0C34.952,31.611,39.278,33.459,39.293,37.568Z" transform="translate(-9.477 -19.107)" fill="#081D5A"/>
+      <path id="Path_12" data-name="Path 12" d="M14.03,33.5a6.869,6.869,0,0,0-1.769,4.6v3.479a21.447,21.447,0,0,1-4.779-1.141A.725.725,0,0,1,7,39.754V37.284c.007-2.711,2.879-3.954,5.137-4.494a5.2,5.2,0,0,0,1.893.709Z" transform="translate(-7 -19.643)" fill="#081D5A"/>
+    </g>
+    <!-- <text id="חדר_מורים" data-name="חדר מורים" transform="translate(57 832)" fill="#d72465" font-size="11" font-family="Arial"><tspan x="0" y="0">חדר מורים</tspan></text> -->
+  </g>
+</svg>

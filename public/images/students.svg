@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="41" height="40.709" viewBox="0 0 41 40.709">
+  <g id="Group_10" data-name="Group 10" transform="translate(-293 -794.291)">
+    <g id="Group_8" data-name="Group 8" transform="translate(-2.423 -4.638)">
+      <circle id="Ellipse_5" data-name="Ellipse 5" cx="5.664" cy="5.664" r="5.664" transform="translate(310.305 798.929)" fill="#d9d8dd"/>
+      <path id="Path_11" data-name="Path 11" d="M39.293,37.568v3.463a1.459,1.459,0,0,1-.964,1.374,31.323,31.323,0,0,1-21.164,0,1.459,1.459,0,0,1-.965-1.374V37.568c.007-4.1,4.348-5.97,7.761-6.768a7.112,7.112,0,0,0,7.578,0C34.952,31.611,39.278,33.459,39.293,37.568Z" transform="translate(288.222 779.822)" fill="#d9d8dd"/>
+    </g>
+    <!-- <text  id="תלמידים" transform="translate(293 832)" fill="#c8c8c9" font-family="Arial" font-size="11"><tspan  x="0" y="0">תלמידים</tspan></text> -->
+  </g>
+</svg>

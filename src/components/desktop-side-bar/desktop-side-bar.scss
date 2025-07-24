@@ -1,0 +1,190 @@
+@import '../desktop-container/sizes.scss';
+
+.desktop-side-bar-container {
+    position: fixed;
+    right: 0;
+    top: $TOP_BAR_HEIGHT;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    button {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+    }
+
+    height: calc(100vh - $TOP_BAR_HEIGHT);
+    width: clamp(15vw, 20rem, 30vw);
+    background-color: $light_blue1;
+    padding: 1.8rem 2rem 2rem 0;
+    @include flex(column);
+
+    color: #5e6c94;
+    z-index: 1;
+    gap: 2rem;
+
+    .user-info {
+        z-index: 1;
+        width: 100%;
+        @include flex(column, space-evenly);
+
+        font-family: 'Rubik-regular';
+        color: $dark_blue1;
+        font-size: 1.1rem;
+        gap: 1vh;
+
+        .name-div {
+            font-size: 1.2rem;
+            font-family: 'Rubik-medium';
+            display: flex;
+            gap: 0.5vw;
+        }
+    }
+
+    .menu-tabs {
+        @include flex(column);
+
+        gap: 2vh;
+        font-family: 'Rubik-regular';
+
+        .tab {
+            font-size: 1.2rem;
+            z-index: 1;
+            @include flex(row, flex-start, center);
+
+            height: 3rem;
+            width: 100%;
+            gap: 2vh;
+        }
+
+        .selected {
+            color: $dark_blue1;
+        }
+
+        .background-div {
+            position: absolute;
+            background-color: white;
+            width: calc($SIDE_BAR_WIDTH - 1rem);
+            height: 3rem;
+            right: 1rem;
+            border-radius: 0 2rem 2rem 0;
+            transition: all 0.3s ease-out;
+        }
+
+        .background-div::before {
+            content: '';
+            position: absolute;
+            border-top-left-radius: 0.7rem;
+            box-shadow: 0 -25px 0 0 white;
+            background-color: transparent;
+            bottom: -50px;
+            left: 0;
+            height: 50px;
+            width: 25px;
+        }
+
+        .background-div::after {
+            content: '';
+            position: absolute;
+            border-bottom-left-radius: 0.7rem;
+            box-shadow: 0 25px 0 0 white;
+            background-color: transparent;
+            bottom: 48px;
+            left: 0;
+            height: 50px;
+            width: 25px;
+        }
+    }
+
+    .gp-count {
+        font-family: 'Rubik-medium';
+        color: $dark_blue1;
+        margin-top: auto;
+        font-size: 1.1rem;
+        display: flex;
+        gap: 0.5rem;
+
+        .heart-icon {
+            width: 1rem;
+        }
+    }
+
+    .send-gp-button {
+        @include flex(row, center, center);
+
+        border-radius: 20px;
+        background-color: #e6f3f5;
+        margin-left: 2rem;
+        gap: 0.5rem;
+        height: 3rem;
+        cursor: pointer;
+        color: $dark_blue1;
+        padding: 0 1rem;
+        margin-top: auto;
+
+        .plus-sign {
+            font-size: 2rem;
+        }
+
+        .send-gp {
+            font-family: 'Rubik-regular';
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.edit-profile-popup {
+    @include flex(column, flex-start, center);
+    align-self: center;
+
+    padding: 0 2vw;
+    width: 25vw;
+
+    .Form-textInput {
+        background-color: white;
+        color: $dark_blue1;
+        font-family: 'Rubik-medium';
+        height: 3rem;
+        border-radius: 7px;
+        padding-right: 0.6rem;
+    }
+
+    .save-details-btn {
+        width: 7.5rem;
+        height: 3rem;
+        border-radius: 10px;
+        background-color: $dark_blue1;
+        color: white;
+        font-family: 'Rubik-medium';
+        font-size: 1.1rem;
+        cursor: pointer;
+        margin-top: 2vh;
+    }
+
+    .change-password {
+        color: $dark_blue1;
+        text-decoration: underline;
+        font-size: 1.2rem;
+        font-family: 'Rubik-regular';
+        align-self: flex-end;
+    }
+
+    .disable {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+.logout-popup {
+    padding: 2rem !important;
+}
+
+//Trick to avoid weird visual bug when zooming in
+@media screen and (max-height: 550px) {
+    .desktop-side-bar-container .menu-tabs .background-div::after {
+        height: 7px;
+    }
+}

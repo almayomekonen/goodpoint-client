@@ -1,0 +1,17 @@
+.lang-btn-desktop {
+    border: 1px solid;
+    border-color: $dark_blue1;
+    border-radius: 2rem;
+
+    .lang {
+        display: flex;
+        gap: 0.5rem;
+        padding-inline: 0.8rem;
+        color: $dark_blue1;
+        font-size: 1rem;
+    }
+
+    .lang:hover {
+        border-radius: 2rem;
+    }
+}

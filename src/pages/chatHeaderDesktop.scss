@@ -1,0 +1,22 @@
+.header-chat-desktop {
+    background-color: $light_blue1;
+    height: 5.7rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    padding-inline-start: 2rem;
+    @include flex(row, center, center);
+
+    .title-header {
+        color: $dark_blue1;
+        font-family: 'Rubik-Medium';
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-height: 650px) and (min-width: 500px) {
+    .header-chat-desktop {
+        height: 4.2rem;
+    }
+}

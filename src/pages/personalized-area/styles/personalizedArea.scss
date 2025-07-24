@@ -1,0 +1,88 @@
+.personalized-area-wrapper {
+    width: 100vw;
+    min-height: 90vh;
+
+    .details-inputs {
+        padding: 2rem;
+        @include flex(column, center, center);
+    }
+
+    .input {
+        .Form-textInput {
+            height: 2.5em;
+            border: $borderColor solid 1px;
+            border-radius: 10px;
+            background-color: transparent;
+            padding: 10px;
+
+            .MuiInputBase-input {
+                color: $dark_blue1;
+                font-size: 1.3em;
+                font-family: Rubik-regular;
+            }
+
+            &.Mui-focused {
+                outline: none;
+            }
+        }
+    }
+
+    .Form-container {
+        .Form-textInput-control {
+            .Form-textInput-label {
+                color: $dark_blue1;
+                font-size: 1.6em;
+                font-family: Rubik-medium;
+                margin-inline-start: 0.5rem;
+            }
+        }
+    }
+
+    .change-password {
+        color: $dark_blue1;
+        text-decoration: underline;
+        font-size: 1.2rem;
+        font-family: 'Rubik-regular';
+        align-self: flex-end;
+    }
+
+    .settings-container {
+        .Form-container {
+            @include flex(row);
+        }
+
+        .setting {
+            @include flex(row, space-between, center);
+
+            width: 100%;
+            background-color: $color-background-off-white;
+            padding: 1vh 5vw;
+            margin-bottom: 2vh;
+        }
+
+        .setting-span {
+            color: $dark_blue1;
+            font-size: 1.29rem;
+            font-weight: 600;
+            font-family: Rubik-light;
+        }
+    }
+
+    .footer-personal {
+        @include flex(row, center);
+
+        .save-button {
+            margin-top: 3rem;
+            margin-bottom: 1em;
+            background-color: #cde7ec;
+            font-family: Rubik-medium;
+
+            width: 80%;
+            color: $dark_blue1;
+            border-radius: 10px;
+            height: 2.3em;
+            font-size: 1.5em;
+            box-shadow: none;
+        }
+    }
+}

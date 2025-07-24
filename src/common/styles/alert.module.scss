@@ -1,0 +1,12 @@
+.message {
+    width: 100%;
+    text-align: center;
+    font-family: Rubik-medium;
+    font-size: 1.5em;
+}
+
+.snackContainer {
+    border-radius: 200px;
+    @include flex(row, center);
+    padding-inline: 2em;
+}

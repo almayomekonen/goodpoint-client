@@ -1,0 +1,2 @@
+export const STUDENTS_FETCH_LIMIT = 50;
+export const GOOD_POINTS_FETCH_LIMIT = 10;

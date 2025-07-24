@@ -1,0 +1,33 @@
+.arrow-down-container {
+    cursor: pointer;
+    width: 3rem;
+    @include flex(row, center, center);
+    border: 0.1rem solid grey;
+    height: 3rem;
+    padding: 0.1rem;
+    border-radius: 50%;
+    right: 3%;
+    bottom: 10%;
+    z-index: 10;
+    background-color: white;
+}
+
+.arrow-scroll-icon {
+    color: #4c9586;
+    width: 2rem;
+    height: 2em;
+}
+
+.arrow-up-container {
+    cursor: pointer;
+    bottom: 3.5%;
+    right: 2%;
+    width: 3rem;
+    @include flex(row, center, center);
+    border: 0.1rem solid grey;
+    height: 3rem;
+    padding: 0.1rem;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 10;
+}

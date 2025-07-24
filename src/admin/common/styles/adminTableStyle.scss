@@ -1,0 +1,163 @@
+.admin-table-container {
+    display: flex;
+    flex-direction: column;
+
+    background-color: $color-background-off-white;
+
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    padding-top: 6.5rem;
+
+    padding-inline: 5vw;
+    padding-bottom: 2vh;
+
+    .AdminTable-row {
+        background-color: #ebf4f5;
+    }
+
+    .AdminTable-cell-arrow {
+        text-align: end;
+    }
+}
+
+.AdminTable-spanCell-noResults {
+    font-size: 1.5rem;
+    padding: 2rem;
+    color: $title-table;
+}
+
+.AdminTable-title {
+    color: $red;
+    font-size: 1.8125rem;
+    font-family: Rubik-medium;
+    text-decoration: none;
+}
+
+.AdminTable-title-container {
+    padding-block: 3vh;
+}
+
+.AdminTable-container {
+    padding: 1vw;
+    width: 95%;
+    background-color: white;
+}
+
+.AdminTable-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 95%;
+    margin-bottom: 2vh;
+
+    .MuiBox-root input {
+        margin-right: 1rem;
+    }
+}
+
+.AdminTable-head {
+    background-color: $color-background-off-white;
+}
+
+.AdminTable-body {
+    background-color: white;
+}
+
+:has(.AdminTable-cell [data-indeterminate='true'], .AdminTable-cell :checked) {
+    .add-buttons-container {
+        display: none;
+    }
+
+    .AdminTable-header {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: end;
+    }
+}
+
+.AdminTable-selectedAmount,
+.AdminTable-searchbar-label {
+    display: none;
+}
+
+.MuiInputAdornment-positionEnd::after {
+    display: none;
+}
+
+.AdminTable-row-root {
+    cursor: pointer;
+}
+
+.AdminTable-headCell {
+    font-size: 1.3rem;
+    font-family: 'Rubik-medium';
+    color: $title-table;
+}
+
+.AdminTable-cell-text {
+    font-size: 1rem;
+    font-family: 'Rubik-regular';
+    color: $color-text;
+}
+
+.AdminTable-paginationFooter-root {
+    font-family: 'Rubik-regular';
+    color: $color-text;
+
+    svg &:not(:disabled) {
+        color: $color-text;
+    }
+}
+
+.AdminTable-searchbar {
+    border: 1px solid $border-grey;
+    background-color: white;
+    border-radius: 15px;
+    padding: 0.6vh;
+    height: 3rem;
+    width: 15vw;
+
+    &:has(.MuiInputBase-root.Mui-focused) {
+        outline: 2px solid $dark_blue1;
+    }
+
+    .MuiInput-root:before,
+    .MuiInput-root:after,
+    .MuiInput-root:hover:not(.Mui-disabled, .Mui-error):before {
+        border-bottom: none;
+    }
+}
+
+.AdminTable-actionButton {
+    color: $dark_blue1;
+    background-color: white;
+    border: 1px solid $border-grey;
+    font-family: Rubik-light;
+    padding: 0.6rem;
+    font-size: 1.25rem;
+    border-radius: 15px;
+    margin-right: 1vw;
+    z-index: 1;
+}
+
+.white-box-bg {
+    background-color: white;
+    padding: 1vw;
+}
+
+.AdminTable-dropDown-select {
+    margin-right: 1rem;
+    height: 3rem;
+    width: 13vw;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.add-icon {
+    color: white;
+}
+
+.AdminTable-spanCell-endOfPage {
+    visibility: hidden;
+}

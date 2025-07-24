@@ -1,0 +1,74 @@
+.titled-header-container {
+    .white-background {
+        height: 5.7rem;
+        width: 100%;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+    }
+
+    .header-area {
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        background-color: $light_blue1;
+        @include flex(row, space-between, center);
+
+        height: 5.5rem;
+        width: 100%;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        color: $dark_blue1;
+        border-bottom-left-radius: 50px;
+
+        .left-invisible-div {
+            width: 2rem;
+        }
+
+        .delete-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            z-index: 1;
+        }
+
+        .titled-header-text {
+            font-size: 1.6rem;
+            font-family: 'Rubik-medium';
+        }
+    }
+
+    .medium-title {
+        padding-top: 2vh;
+        height: 10.5rem;
+    }
+
+    .large-title {
+        padding-top: 2vh;
+        height: 13.5rem;
+    }
+
+    .medium-background {
+        height: 10rem;
+    }
+
+    .large-background {
+        height: 13rem;
+    }
+
+    .header-area::before {
+        content: '';
+        position: absolute;
+        background-color: transparent;
+        bottom: -50px;
+        height: 50px;
+        width: 41px;
+        border-top-right-radius: 83px;
+        right: -3px;
+        box-shadow: 0 -25px 0 0 $light_blue1;
+    }
+
+    .display-block {
+        display: block;
+    }
+}

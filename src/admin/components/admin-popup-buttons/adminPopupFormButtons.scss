@@ -1,0 +1,7 @@
+.admin-popup-buttons-container {
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+    @include flex(row, center, center);
+    gap: 1vw;
+    width: 100%;
+}

@@ -1,0 +1,203 @@
+@import '../../components/desktop-container/sizes.scss';
+
+.preset-messages-bank-container {
+    @include flex(row, flex-start);
+    gap: 10vw;
+    height: 100%;
+
+    .side-image {
+        width: clamp(13vw, 23rem, 24vw);
+    }
+
+    .delete-pm-popup-container {
+        padding: 2rem !important;
+    }
+
+    .bank-container {
+        width: 100vw;
+
+        button {
+            background: none;
+            color: inherit;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+        }
+
+        .categories-bar {
+            background-color: white;
+            height: 6vh;
+            @include flex(row, space-between, center);
+
+            padding: 0 2rem;
+            width: 100%;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+
+            .tab {
+                color: $blue1;
+                font-family: 'Rubik-regular';
+                font-size: 1.2rem;
+                width: 4rem;
+                height: 2.6rem;
+                cursor: pointer;
+            }
+
+            .selected {
+                color: white;
+                border-radius: 20px;
+                z-index: 1;
+            }
+
+            .background-div {
+                position: absolute;
+                border-radius: 20px;
+                width: 4rem;
+                height: 2.6rem;
+                background-color: $blue;
+            }
+        }
+
+        .messages-div {
+            overflow-y: scroll;
+            max-height: 80vh;
+            direction: ltr;
+
+            //reverting the effect of direction: ltr on the scrollbar
+            * {
+                direction: rtl;
+            }
+
+            .padding-div {
+                height: 7vh;
+            }
+        }
+
+        .add-button {
+            background-color: #040463;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 1rem;
+            left: 1rem;
+
+            @include flex(row, center, center);
+            cursor: pointer;
+
+            .plus-sign {
+                color: white;
+                font-size: 5rem;
+            }
+        }
+
+        @media only screen and (min-width: 800px) {
+            width: clamp(30vw, 50%, 40vw);
+        }
+
+        .bank-container {
+            width: 100vw;
+
+            button {
+                background: none;
+                color: inherit;
+                border: none;
+                padding: 0;
+                font: inherit;
+                cursor: pointer;
+                outline: inherit;
+            }
+
+            .categories-bar {
+                background-color: white;
+                height: 6vh;
+                @include flex(row, space-between, center);
+
+                padding: 0 2rem;
+                width: 100%;
+                box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+
+                .tab {
+                    color: $blue1;
+                    font-family: 'Rubik-regular';
+                    font-size: 1.2rem;
+                    width: 4rem;
+                    height: 2.6rem;
+                    cursor: pointer;
+                }
+
+                .selected {
+                    color: white;
+                    border-radius: 20px;
+                    z-index: 1;
+                }
+
+                .background-div {
+                    position: absolute;
+                    border-radius: 20px;
+                    width: 4rem;
+                    height: 2.6rem;
+                    background-color: $blue;
+                }
+            }
+
+            .messages-div {
+                overflow-y: scroll;
+                max-height: 80vh;
+
+                .padding-div {
+                    height: 7vh;
+                }
+            }
+
+            .add-button {
+                background-color: $dark_blue1;
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+                position: fixed;
+                bottom: 1rem;
+                left: 1rem;
+
+                @include flex(row, center, center);
+                cursor: pointer;
+
+                .plus-sign {
+                    color: white;
+                    font-size: 5rem;
+                }
+            }
+        }
+
+        @media only screen and (min-width: 800px) {
+            height: 100%;
+
+            .categories-bar {
+                .background-div {
+                    background-color: $blue;
+                }
+            }
+
+            .messages-div {
+                height: 100%;
+            }
+
+            .add-button {
+                position: absolute;
+                right: 2rem;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1024px) {
+    .preset-messages-bank-container {
+        gap: 3vw;
+
+        .bank-container {
+            width: 56%;
+        }
+    }
+}

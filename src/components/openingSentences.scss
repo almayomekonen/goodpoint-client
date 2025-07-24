@@ -1,0 +1,78 @@
+@import '../common/styles/common-styles.scss';
+
+.openingSentences {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    .MuiTabs-flexContainer {
+        background-color: #f1f1f1;
+        height: $opening_sentences_navbar;
+        @include flex(row, space-evenly);
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .MuiTab-root {
+        color: $blue;
+        font-family: 'Rubik-regular';
+        min-width: auto;
+        font-size: clamp(1rem, 2vh, 1.2rem);
+        // font-size: clamp(1vh, 1.2rem, 4vh);
+    }
+
+    .MuiTab-root.Mui-selected {
+        color: #f1f1f1;
+        z-index: 1;
+    }
+
+    /* MUI doesn't give access to TabPanel className, for some reason... */
+    [role='tabpanel'] .MuiBox-root {
+        padding: 2rem;
+        background-color: white;
+        height: $opening_sentences_storage;
+        overflow-y: scroll;
+    }
+
+    .MuiTabs-indicator {
+        position: absolute;
+        height: 3rem;
+        border-radius: 1.8rem;
+        bottom: 1rem;
+        width: 100%;
+        -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        background-color: $blue;
+    }
+
+    .sentence {
+        background-color: #f1f1f1a1;
+        height: auto;
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+        padding: 0.5rem;
+        padding-right: 1rem;
+        border-radius: 0.8rem;
+        color: $blue;
+        font-family: 'Rubik-regular';
+        cursor: pointer;
+    }
+
+    .selected {
+        background-color: #5e6c94b2;
+        color: white;
+    }
+}
+
+.openingSentences-desktop {
+    position: absolute;
+}
+
+@media (max-height: 650px) and (min-width: 500px) {
+    .openingSentences {
+        [role='tabpanel'] .MuiBox-root {
+            padding: 1.5rem;
+            height: 10rem;
+        }
+    }
+}

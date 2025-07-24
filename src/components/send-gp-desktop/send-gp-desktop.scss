@@ -1,0 +1,20 @@
+.send-gp-desktop-container {
+    width: 60vw;
+    height: 80vh;
+
+    .send-gp-clear-button {
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        width: 2rem;
+        height: 2rem;
+        z-index: 1000;
+        cursor: pointer;
+
+        .send-gp-clear-icon {
+            width: 2rem;
+            height: 2rem;
+            color: $dark_blue1;
+        }
+    }
+}

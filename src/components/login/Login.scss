@@ -1,0 +1,244 @@
+@import '../../common/styles/colors.scss';
+
+.login {
+    @include flex(column, center, center);
+
+    .inputs-container {
+        width: 90%;
+        height: 40%;
+        @include flex(column, center, center);
+
+        .headline {
+            width: 100%;
+            font-family: Rubik-medium;
+            color: $dark_blue1;
+            margin-bottom: 1.3rem;
+            font-size: 1.6rem;
+        }
+
+        .Form-textInput {
+            height: 2.5em;
+            border: $borderColor solid 1px;
+            border-radius: 10px;
+            background-color: transparent;
+            padding: 0.625rem;
+
+            .MuiInputBase-input {
+                color: $dark_blue1;
+                font-size: 1.3em;
+                font-family: Rubik-regular;
+                margin-right: 12px;
+            }
+
+            &.Mui-focused {
+                outline: none;
+            }
+        }
+
+        .Form-container {
+            .Form-textInput-control {
+                .Form-textInput-label {
+                    color: $dark_blue1;
+                    font-size: 1.3em;
+                    font-family: Rubik-medium;
+        
+                }
+            }
+
+            .Form-textInput-errorMsg {
+                margin: 0;
+            }
+
+            .Form-textInput-maxLength {
+                display: none;
+            }
+
+            input:-webkit-autofill {
+                -webkit-box-shadow: 0 0 1000px 1000px #fff inset;
+            }
+        }
+
+        .forgot-password {
+            color: $dark_blue1;
+            text-decoration: underline;
+            font-size: 1.2rem;
+            font-family: 'Rubik-medium';
+            border: none;
+            align-self: flex-end;
+        }
+
+        .login-button {
+            background-color: $light_blue1;
+            font-family: Rubik-medium;
+            width: 100%;
+            color: $dark_blue1;
+            border-radius: 10px;
+            height: 2.3em;
+            font-size: 1.5em;
+            box-shadow: none;
+            margin-top: 1rem;
+            z-index: 1;
+        }
+
+        .login-button-desktop {
+            background-color: $dark_blue1;
+            font-family: Rubik-medium;
+            width: 30%;
+            color: white;
+            border-radius: 60px;
+            height: 2.3em;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            align-self: flex-end;
+        }
+
+        .prev {
+            margin-bottom: 5rem;
+            align-self: flex-start;
+
+            .label {
+                margin-inline-start: 1rem;
+                color: $dark_blue1;
+                font-size: 1.3em;
+                font-family: Rubik-medium;
+            }
+        }
+    }
+}
+
+// עיצוב מודרני רק למובייל
+@media (max-width: 768px) {
+    .login {
+        .inputs-container {
+            gap: 1.5rem;
+            max-width: 320px;
+            padding: 0 1.5rem;
+            width: 100%;
+
+            // מסתיר labels במובייל
+            .Form-textInput-control .Form-textInput-label {
+                display: none !important;
+            }
+
+            // עיצוב שדות במובייל
+            .Form-textInput {
+                background-color: #f5f1eb !important;
+                border: none !important;
+                border-radius: 50px !important;
+                height: 60px !important;
+                padding: 0 !important;
+                margin: 0.5rem 0 !important;
+                width: 100% !important;
+
+                .MuiInputBase-root {
+                    border: none !important;
+                    height: 100%;
+                    border-radius: 50px !important;
+
+                    input, .MuiInputBase-input {
+                        padding: 1rem !important;
+                        text-align: center !important;
+                        font-size: 1rem !important;
+                        height: 60px !important;
+                        color: #666 !important;
+                        border: none !important;
+                        background: transparent !important;
+
+                        &::placeholder {
+                            color: #aaa !important;
+                            text-align: center !important;
+                            opacity: 1 !important;
+                        }
+                    }
+
+                    .MuiOutlinedInput-notchedOutline {
+                        border: none !important;
+                    }
+
+                    &:hover .MuiOutlinedInput-notchedOutline {
+                        border: none !important;
+                    }
+
+                    &.Mui-focused .MuiOutlinedInput-notchedOutline {
+                        border: none !important;
+                    }
+                }
+
+                &:focus-within {
+                    background-color: #f0ebe3 !important;
+                    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2) !important;
+                }
+            }
+
+            // כפתור שכחת סיסמה במובייל
+            .forgot-password {
+                color: #999 !important;
+                font-size: 0.95rem !important;
+                text-decoration: none !important;
+                // margin: 1.5rem 0 2rem 0 !important;
+                align-self: center !important;
+                text-align: center !important;
+
+                &:hover {
+                    text-decoration: underline !important;
+                    color: #777 !important;
+                }
+            }
+
+            // כפתור כניסה במובייל
+            .login-button {
+                background: linear-gradient(135deg, #7dd3f0 0%, #5bc0de 100%) !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 50px !important;
+                height: 60px !important;
+                font-size: 1.2rem !important;
+                font-weight: 600 !important;
+                box-shadow: 0 4px 15px rgba(125, 211, 240, 0.3) !important;
+                transition: all 0.3s ease !important;
+                margin-top: 0 !important;
+                width: 100% !important;
+                max-width: 280px !important;
+                align-self: center !important;
+
+                &:hover {
+                    background: linear-gradient(135deg, #5bc0de 0%, #46b8da 100%) !important;
+                    box-shadow: 0 6px 20px rgba(125, 211, 240, 0.4) !important;
+                    transform: translateY(-1px) !important;
+                }
+
+                &:active {
+                    transform: translateY(0) !important;
+                }
+            }
+        }
+    }
+}
+
+// התאמה לטלפונים קטנים
+@media (max-width: 480px) {
+    .login {
+        .inputs-container {
+            max-width: 320px;
+            
+            .headline {
+                font-size: 1.4rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .Form-textInput {
+                height: 55px !important;
+                
+                .MuiInputBase-root input {
+                    height: 55px !important;
+                    font-size: 0.95rem !important;
+                }
+            }
+            
+            .login-button {
+                height: 55px !important;
+                font-size: 1rem !important;
+            }
+        }
+    }
+}

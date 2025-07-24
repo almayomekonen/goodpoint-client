@@ -1,0 +1,44 @@
+.success-adding-teacher-popup {
+    @include flex(column, center, center);
+    min-height: 10vh;
+
+    width: 30vw;
+    margin-top: 2rem;
+
+    .new-password {
+        margin: 1.5rem;
+        color: $dark_blue1;
+        font-size: 1.5rem;
+        white-space: break-spaces;
+
+        .password-and-copy {
+            @include flex(row, center, center);
+            margin: 0.5rem;
+            gap: 0.5rem;
+
+            .copy-icon {
+                cursor: pointer;
+                min-width: 0;
+            }
+        }
+    }
+
+    .attention {
+        margin-bottom: 1.5rem;
+        color: $dark_blue1;
+        font-size: 1.2rem;
+        white-space: break-spaces;
+    }
+
+    .close-btn {
+        color: white;
+        font-size: 1.5rem;
+        font-family: 'Rubik-regular';
+        background-color: $dark_blue1;
+        border-radius: 11px;
+        padding: 0.5vh 1vh;
+        width: 7rem;
+        align-self: center;
+        height: 3rem;
+    }
+}

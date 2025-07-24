@@ -1,0 +1,188 @@
+$headHeight: 19em;
+$stickyHeight: 4em;
+
+.classes-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+
+    .section {
+        width: 100%;
+        padding-left: 2.3rem;
+    }
+
+    .head {
+        height: $headHeight;
+        width: 100%;
+        background-color: white;
+        position: relative;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .sticky {
+        display: block;
+        position: relative;
+        width: 100vw;
+        height: $stickyHeight;
+        background-color: white;
+        z-index: 3;
+        min-height: fit-content;
+    }
+
+    .headline {
+        width: 100%;
+        overflow: scroll;
+    }
+
+    .grades-wrapper-desktop {
+        height: calc(100vh - ($headHeight + $stickyHeight));
+        overflow-y: auto;
+
+        .classes-container {
+            width: 100%;
+
+            & :last-child {
+                border-bottom: none;
+            }
+        }
+
+        .user-card-button-wrapper {
+            border-bottom: $user_card_border 1px solid;
+        }
+
+        & :last-child {
+            border-bottom: none;
+        }
+
+        .study-groups-container {
+            width: 100%;
+        }
+    }
+
+    .grades-wrapper {
+        @include flex(column, flex-start, center);
+
+        overflow-x: hidden;
+
+        .study-groups-container,
+        .classes-container {
+            width: 100%;
+            @include flex(column, flex-start, center);
+        }
+
+        .user-card-button-wrapper {
+            width: 92%;
+        }
+
+        padding-bottom: 7em;
+
+        .error-div {
+            @include flex(column, center, center);
+
+            font-family: Rubik-medium;
+            max-width: -webkit-fill-available;
+            max-height: -webkit-fill-available;
+
+            .error-text {
+                text-align: center;
+                color: $orange;
+                font-size: 1.75em;
+            }
+
+            .error-text-description {
+                font-family: Rubik-regular;
+                text-align: center;
+                color: $orange;
+                font-size: 1.5em;
+                margin-top: 0.75em;
+                white-space: break-spaces;
+                line-height: 1.2em;
+            }
+        }
+    }
+
+    .study-group-main-wrapper {
+        width: 90%;
+
+        @media screen and (max-width: 800px) {
+            background-color: transparent;
+
+            .no-groups {
+                align-self: center;
+            }
+        }
+
+        background-color: $light_blue2;
+
+        border-radius: 10px;
+        margin-block: 1em;
+
+        .study-group-headline {
+            width: 100%;
+            height: fit-content;
+            @include flex(column, center, flex-start);
+            padding: 1rem;
+
+            .group-headline-name {
+                font-family: Rubik-Regular;
+                font-size: 1.4em;
+                color: $dark_blue1;
+            }
+        }
+    }
+}
+
+.unbookmark-popup {
+    padding: 2rem !important;
+}
+
+.class-grades-gradient-div-left {
+    -webkit-mask-image: -webkit-gradient(
+        linear,
+        left center,
+        right center,
+        color-stop(57%, rgb(0, 0, 0)),
+        color-stop(100%, rgba(0, 0, 0, 0))
+    );
+
+    position: absolute;
+    height: 4rem;
+    width: 12vw;
+    background: white;
+    left: 0px;
+    z-index: 10;
+}
+
+.class-grades-gradient-div-right {
+    -webkit-mask-image: -webkit-gradient(
+        linear,
+        right center,
+        left center,
+        color-stop(57%, rgb(0, 0, 0)),
+        color-stop(100%, rgba(0, 0, 0, 0))
+    );
+    position: absolute;
+    height: 4rem;
+    width: 8vw;
+    right: -1.4rem;
+    background: white;
+    z-index: 10;
+    border-radius: 0px 63px 0px 0px;
+}
+
+.filter-grades-wrapper {
+    padding-left: 3rem;
+    padding-inline-end: 1em;
+    height: 80%;
+    @include flex(row, flex-start, center);
+
+    overflow-x: scroll;
+    height: fit-content;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

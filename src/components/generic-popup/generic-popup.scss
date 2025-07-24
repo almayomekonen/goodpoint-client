@@ -1,0 +1,180 @@
+.generic-popup-container {
+    .generic-popup-button {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+    }
+
+    text-align: center;
+    font-family: 'Rubik-regular';
+    backdrop-filter: $popupBlur;
+    direction: rtl;
+
+    .clear-icon {
+        display: flex;
+        justify-content: flex-start;
+        cursor: pointer;
+        width: 1em;
+        color: $dark_blue1;
+        position: relative;
+        left: 10px;
+        top: -10px;
+        align-self: flex-start;
+    }
+
+    //for using form inside the popup
+    .Form-body {
+        width: auto;
+    }
+
+    //mui
+    //background
+    .MuiModal-backdrop {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    //popup blockadmin
+    .MuiDialog-paperWidthSm {
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: none;
+        padding: 1rem;
+        position: absolute;
+        max-width: none;
+
+        //buttons
+        .MuiDialogActions-root {
+            justify-content: space-evenly;
+        }
+    }
+
+    .title {
+        font-size: 2rem;
+        color: $dark_blue1;
+        font-family: 'Rubik-medium';
+    }
+
+    //content
+    .content {
+        color: $dark_blue1;
+        font-size: 1.5rem;
+        font-family: 'Rubik-regular';
+        padding: 2rem 0;
+        max-width: 22rem;
+        align-self: center;
+    }
+
+    // buttons
+    .buttons {
+        padding-top: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 1.3rem;
+        padding-top: 1.5rem;
+    }
+
+    .ex-mark-icon {
+        position: absolute;
+        right: 1.2rem;
+        top: 1.2rem;
+    }
+
+    .tab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12rem;
+        height: 4rem;
+        border-radius: 13px;
+        font-size: 1.5rem;
+        font-family: 'Rubik-medium';
+    }
+
+    .tab:disabled {
+        opacity: 0.5;
+    }
+
+    .checkbox-stack {
+        .checkbox-button {
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+
+        .checkbox-label {
+            color: $color-text;
+        }
+    }
+
+    .checkbox-warning {
+        opacity: 0;
+        text-align: start;
+    }
+
+    .active-warning {
+        color: $forms-error;
+        padding-inline-start: 3rem;
+        padding-top: 0.2rem;
+        font-size: 0.8rem;
+        opacity: 1;
+    }
+
+    @media (min-width: 992px) {
+        //popup block
+        .MuiDialog-paperWidthSm {
+            border-radius: 15px;
+            box-shadow: none;
+
+            //title
+            .MuiDialogTitle-root {
+                font-size: 2rem;
+                font-family: 'Rubik-medium';
+                color: $red;
+                padding-top: 2rem;
+                padding-bottom: 0;
+            }
+
+            //content
+            .MuiDialogContentText-root {
+                color: $dark_blue1;
+                font-size: 1.5rem;
+                font-family: 'Rubik-regular';
+            }
+
+            //buttons
+            .MuiDialogActions-root {
+                justify-content: center;
+                gap: 5vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .generic-popup-container {
+        .MuiDialog-paperWidthSm {
+            width: 23rem;
+            max-width: 88vw;
+            overflow-y: scroll;
+        }
+
+        .MuiDialog-paperWidthSm ::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-height: 650px) and (min-width: 500px) {
+    .generic-popup-container {
+        .MuiDialog-paperWidthSm {
+            max-width: 88vw;
+            overflow-y: scroll;
+        }
+
+        .MuiDialog-paperWidthSm ::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}

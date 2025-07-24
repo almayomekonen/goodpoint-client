@@ -8,6 +8,7 @@
         "build": "tsc && vite build --outDir build",
         "preview": "vite preview --port 3000 --host",
         "postinstall": "npm run build",
+        "serve": "serve build -l $PORT --single",
         "lint": "eslint \"{src,apps,libs,test}/**/*.{ts,tsx}\" --fix",
         "format": "prettier --write src/",
         "test": "jest"

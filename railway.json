@@ -5,7 +5,7 @@
         "buildCommand": "npm install && npm run build"
     },
     "deploy": {
-        "startCommand": "npx serve build -l 3000",
+        "startCommand": "npm run serve",
         "healthcheckPath": "/",
         "healthcheckTimeout": 300,
         "restartPolicyType": "ON_FAILURE",
